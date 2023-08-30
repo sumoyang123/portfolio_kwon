@@ -1,0 +1,331 @@
+
+/* 공통 */
+.container{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.none{cursor: url(../img/cursor_wait.png) 40 12,auto;}
+.none a{cursor: url(../img/cursor_wait.png) 40 12,auto;}
+.sub_title h2{
+  font-family: 'EsaManru';
+  font-size: 3.25rem;
+  color: #303030;
+  margin-bottom: 18px;
+}
+.sub_title p{
+  font-family: 'EsaManru';
+  font-weight: 300;
+  font-size: 1.625rem;
+  color: #666666;
+}
+.btn_link{
+  display: block;
+  width: 180px;
+  line-height: 50px;
+  border: 1px solid;
+  text-align: center;
+  border-radius: 10px;
+  font-family: 'Esamanru';
+  font-size: 1.125rem;
+  font-weight: 300;
+  transition: 0.5s;
+}
+.btn_link:hover{
+  background-color: #383838;
+  color: #fff;
+}
+.slide_num{
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+/* 헤더 */
+header{
+  width: 100%;
+  height: 95px;
+  background-color: #fff;
+  box-shadow: 0 2px 2px rgba(0 0 0 / 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  transition: 1s;
+}
+h1{
+  padding-left: 4.2%;
+}
+h1 img{width: 177px;}
+.submenu_bg{
+  position: absolute;
+  left: 0;
+  top: 95px;
+  width: 100%;
+  height: 240px;
+  background-color: #fff;
+  border-top: 2px solid #f3f3f3;
+  box-shadow: 0 2px 2px rgba(0 0 0/0.1);
+  display: none;
+}
+.main_menu{
+  top: 0;
+  display: flex;
+  padding: 0 15px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 95px;
+}
+.main_menu > li{
+  width: 130px;
+  height: 95px;
+  margin: 0 15px;
+}
+.main_menu > li > a{display: block;position: relative;}
+.sub_menu{
+  display: none;
+}
+.sub_menu > li{
+  font-weight: 400;
+  color: #999;
+  line-height: 60px;
+  position: relative;
+}
+.sub_menu > li > a{display: block;}
+.sub_menu > li > a:hover{
+  color: #383838;
+  font-weight: 600;
+}
+.header_right{
+  display: flex;
+  align-items: center;
+}
+.select_box{position: relative;cursor: pointer;}
+.select_box::before{
+  content: url(../img/btn_lang.png);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.opt_lang{
+  -webkit-appearance:none;
+  appearance:none;
+  width: 105px;
+  height: 44px;
+  margin-right: 24px;
+  padding: 0 32px 0 44px;
+  outline: none;
+  border: none;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: #383838;
+  background:url(../img/btn_langselect.png) no-repeat 97% 50%/15px auto;
+}
+.btn_sitemap{
+  width: 95px;
+  height: 95px;
+  background-color: #383838;
+  text-align: center;
+  padding: 29.5px;
+  cursor: pointer;
+}
+/* //헤더 */
+
+/* 사이트맵 */
+.sitemap{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #383838;
+  z-index: 99999;
+  padding: 300px 80px;
+  display: none;
+}
+.btn_closemap{
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 95px;
+  height: 95px;
+  text-align: center;
+  padding: 29.5px;
+  cursor: pointer;
+}
+.main_menu_side{
+  display: flex;
+  flex-wrap: wrap;
+  color: #f4f4f4;
+  justify-content: space-between;
+}
+.main_menu_side > li > a{
+  display: block;
+  width: 280px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'EsaManru';
+}
+.sub_menu_side{
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.25rem;
+  color: #999;
+}
+.sub_menu_side li:hover a{
+  font-weight: 700;
+  color: #FF5151;
+}
+/* //사이트맵 */
+
+/* 푸터 */
+footer{
+  width: 100%;
+  background-color: #383838;
+  color: #999;
+  padding: 40px 0;
+}
+footer > .container{
+  display: flex;
+}
+.footer_center{
+  flex-grow: 1;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.footer_center span,.footer_center small{padding: 6px 0;}
+.footer_right{
+  display: flex;
+  flex-direction: column;
+  align-items:end;
+}
+.footer_map{
+  display: flex;
+  font-weight: 600;
+}
+.footer_map li{
+  padding: 0 10px;
+  border-left: 2px solid;
+}
+.footer_map li:first-child{
+  padding-left: 0;
+  border-left: none;
+}
+.footer_map li:last-child{padding-right: 0;}
+.footer_sns{
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+.footer_sns li{padding-left: 20px;}
+.footer_sns li:first-child{padding-left: 0;}
+/* //푸터 */
+
+
+/* 미디어쿼리 (769~1302)*/
+@media screen and (max-width:1303px){
+  .sub_title h2{font-size: 2rem;}
+  .sub_title p{font-size: 1.125rem;}
+  .btn_link{
+    width: 120px;
+    line-height: 40px;
+    font-size: 1rem;
+  }
+
+  .menu_header{display: none;}
+  .sitemap{
+    padding: 120px 80px;
+  }
+  footer{padding: 24px 0;}
+  .footer_center{padding: 0 2%;}
+  .footer_map{
+    flex-direction: column;
+    align-items: end;
+  }
+  .footer_map li{padding: 0;border: none;}
+  .footer_sns li{padding-left: 12px;}
+}
+
+/* 미디어쿼리(320~768) */
+@media screen and (max-width:768px){
+  .sub_title h2{font-size: 1.25rem;}
+  .sub_title p{font-size: 1rem;}
+  .btn_link{
+    width: 90px;
+    line-height: 30px;
+    font-size: 0.75rem;
+  }
+
+  header{height: 60px;}
+  h1 img{width: 100px;}
+  .select_box::before{
+    left: -32px;
+    top: 0;
+  }
+  .opt_lang{
+    width: 48px;
+    height: 24px;
+    padding: 0;
+    margin-right: 16px;
+  }
+  .btn_sitemap{
+    width: 60px;
+    height: 60px;
+    padding: 18px;
+  }
+  .btn_sitemap img{width: 24px;}
+
+  .sitemap{padding: 20px 60px 20px 20px}
+  .btn_closemap{
+    width: 60px;
+    height: 60px;
+    padding: 18px;
+  }
+  .btn_closemap img{width: 24px;}
+  
+  .main_menu_side > li > a{
+    width: 120px;
+    line-height: 40px;
+    font-size: 1.5rem;
+  }
+  .sub_menu_side{
+    line-height: 24px;
+    font-size: 1rem;
+  }
+
+  footer{
+    padding: 24px 0;
+    font-size: 0.75rem;
+  }
+  footer > .container{flex-direction: column;}
+  .footer_center{
+    margin-top: 16px;
+    padding: 0;
+    order: 3;
+  }
+  .footer_center span,.footer_center small{padding: 2px 0;}
+  .footer_right{align-items: start;}
+  .footer_map{
+    flex-direction: row;
+    margin: 16px 0;
+  }
+  .footer_map li{
+    padding: 0 6px;
+    border-left: 2px solid;
+  }
+  .footer_map li:first-child{
+    padding-left: 0;
+    border-left: none;
+  }
+  .footer_map li:last-child{padding-right: 0;}
+  .footer_sns{margin-top: 0;}
+}

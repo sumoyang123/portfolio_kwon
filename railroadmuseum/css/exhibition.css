@@ -1,0 +1,74 @@
+.sub_visual{
+  background: url(../img/sub_visual02.jpg) no-repeat center;
+  background-size: cover;
+}
+main h2{
+  font-size: 2rem;
+  padding: 60px 0 18px;
+  font-family: 'Esamanru';
+}
+main > p{font-size: 1.125rem;}
+
+.room_info{width: 36%;}
+.room_img{
+  width: 100%;
+  height: 470px;
+  border-radius: 30px;
+  background: url(../img/exhibit01.jpg) no-repeat center;
+  background-size: cover;
+}
+.room_info h3{
+  font-size: 1.75rem;
+  font-family: 'Esamanru';
+  font-weight: 300;
+  padding: 23px 0 20px;
+}
+.room_info p{font-size: 1.25rem;}
+
+.map_wrap{
+  margin: 60px 0 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.map_detail{
+  position: relative;
+  width: 50%;
+}
+.inside_map{width: 100%;}
+.map_pin{width: 5.56%;position: absolute;cursor: pointer;}
+.pin1{left: 48%;top: 69%;}
+.pin2{left: 24%;top: 78%;}
+.pin3{left: 56%;top: 55%;}
+.pin4{left: 84%;top: 59%;}
+.pin5{left: 20%;top: 29%;}
+.pin6{left: 35%;top: 14%;}
+.pin7{left: 60%;top: 7%;}
+.pin8{left: 76%;top: 14%;}
+
+/* 미디어쿼리 (769~1302)*/
+@media screen and (max-width:1302px){
+  .room_info{width:42%}
+  .room_img{height: 320px;}
+  .room_info h3{font-size: 1.25rem;padding: 16px 0 12px;}
+  .room_info p{font-size: 1rem;}
+}
+
+/* 미디어쿼리(320~768) */
+@media screen and (max-width:768px){
+  main h2{
+    font-size: 1.5rem;
+    padding: 40px 0 8px;
+  }
+  main > p{font-size: 1rem;}
+  .map_wrap{
+    margin: 40px 0 60px;
+    flex-wrap: wrap;
+  }
+  .room_info{width: 100%;}
+  .room_img{height: 240px;}
+  .room_info h3{font-size: 1.125rem;padding: 12px 0 6px;}
+  .room_info p{font-size: 1rem;padding-bottom: 12px;}
+
+  .map_detail{width: 100%;order: 2;}
+}

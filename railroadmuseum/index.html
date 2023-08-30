@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>철도박물관</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <!-- 헤더 -->
+  <header>
+    <h1><a href="#"><img src="img/logo.png" alt="철도박물관"></a></h1>
+    <div class="submenu_bg"></div>
+    <nav class="menu_header">
+      <ul class="main_menu">
+        <li><a href="information01.html">관람정보</a>
+          <ul class="sub_menu">
+            <li><a href="information01.html">박물관 관람안내</a></li>
+            <li class="none"><a href="#">디오라마</a></li>
+            <li class="none"><a href="#">전시해설</a></li>
+          </ul>
+        </li>
+        <li><a href="exhibition01.html">전시안내</a>
+          <ul class="sub_menu">
+            <li><a href="exhibition01.html">본관(전시실)</a></li>
+            <li class="none"><a href="#">야외전시장</a></li>
+            <li class="none"><a href="#">운전체험실</a></li>
+          </ul>
+        </li>
+        <li><a href="archive01.html">아카이브</a>
+          <ul class="sub_menu">
+            <li><a href="archive01.html">소장유물</a></li>
+            <li class="none"><a href="#">자료기증안내</a></li>
+            <li class="none"><a href="#">온라인교육</a></li>
+          </ul>
+        </li>
+        <li><a href="notice.html">소식/후기</a>
+          <ul class="sub_menu">
+            <li><a href="notice.html">공지사항</a></li>
+            <li class="none"><a href="#">묻고답하기</a></li>
+            <li class="none"><a href="#">관람후기</a></li>
+          </ul>
+        </li>
+        <li><a href="history.html">박물관소개</a>
+          <ul class="sub_menu">
+            <li class="none"><a href="#">인사말</a></li>
+            <li><a href="history.html">연혁</a></li>
+            <li class="none"><a href="#">찾아오시는길</a></li>
+            <li class="none"><a href="#">언론홍보</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="header_right">
+      <div class="select_box">
+        <select class="opt_lang">
+          <option value="korean">kor</option>
+          <option value="english">eng</option>
+        </select>
+      </div>
+      <div class="btn_sitemap"><img src="img/btn_sitemap.png" alt="사이트맵아이콘"></div>
+  </div>
+  </header>
+  <!-- //헤더 -->
+
+  <!-- 사이트맵 -->
+  <div class="sitemap">
+    <div class="btn_closemap"><img src="img/btn_close.png" alt=""></div>
+    <nav>
+      <ul class="main_menu_side">
+        <li><a href="information01.html">관람정보</a>
+          <ul class="sub_menu_side">
+            <li><a href="information01.html">박물관 관람안내</a></li>
+            <li class="none"><a href="#">디오라마</a></li>
+            <li class="none"><a href="#">전시해설</a></li>
+          </ul>
+        </li>
+        <li><a href="exhibition01.html">전시안내</a>
+          <ul class="sub_menu_side">
+            <li><a href="exhibition01.html">본관(전시실)</a></li>
+            <li class="none"><a href="#">야외전시장</a></li>
+            <li class="none"><a href="#">운전체험실</a></li>
+          </ul>
+        </li>
+        <li><a href="archive01.html">아카이브</a>
+          <ul class="sub_menu_side">
+            <li><a href="archive01.html">소장유물</a></li>
+            <li class="none"><a href="#">자료기증안내</a></li>
+            <li class="none"><a href="#">온라인교육</a></li>
+          </ul>
+        </li>
+        <li><a href="notice.html">소식/후기</a>
+          <ul class="sub_menu_side">
+            <li><a href="notice.html">공지사항</a></li>
+            <li class="none"><a href="#">묻고답하기</a></li>
+            <li class="none"><a href="#">관람후기</a></li>
+          </ul>
+        </li>
+        <li><a href="history.html">박물관소개</a>
+          <ul class="sub_menu_side">
+            <li class="none"><a href="#">인사말</a></li>
+            <li><a href="history.html">연혁</a></li>
+            <li class="none"><a href="#">찾아오시는길</a></li>
+            <li class="none"><a href="#">언론홍보</a></li>
+          </ul>
+        </li>
+        <li class="none"><a href="#">VR 박물관</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- //사이트맵 -->
+
+  <!-- 비주얼 -->
+  <section id="main_visual">
+    <div class="container">
+      <div class="visual_img">
+        <div class="visual_museum"></div>
+        <div class="visual_shot">
+          <div class="visual_item visual1"></div>
+          <div class="visual_item visual2"></div>
+          <div class="visual_item visual3"></div>
+        </div>
+      </div>
+      <div class="info">
+        <div class="info_left">
+          <h3 class="info_time">관람시간</h3>
+          <h3 class="info_ticket">입장료</h3>
+        </div>
+        <div class="info_right">
+          <ul>
+            <li><a href="information01.html">관람안내</a></li>
+            <li class="none"><a href="#">예약안내</a></li>
+            <li class="none"><a href="#">오시는길</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //비주얼 -->
+
+  <!-- 상설전시 -->
+  <section id="main_exhibition">
+    <div class="exhibition_bg"></div>
+    <div class="exhibit_slidewrap">
+      <ul class="exhibit_slidearea">
+        <li><img src="img/exhibit01.jpg" alt=""></li>
+        <li><img src="img/exhibit02.jpg" alt=""></li>
+        <li><img src="img/exhibit03.jpg" alt=""></li>
+        <li><img src="img/exhibit05.jpg" alt=""></li>
+      </ul>
+    </div>
+    <div class="exhib_right">
+      <div class="sub_title">
+        <h2>상설전시</h2>
+        <p>Permanent Exhibition</p>
+      </div>
+      <ul class="exhibit_text">
+        <li><h3>중앙홀</h3>철도박물관 실내전시관 메인홀로 우리나라 최초의 철도인 경인철도 기공식 사진과 한국철도 100주년 기념 조형물, 파시 1형 증기기관차 4288호 축소모형이 전시되어 있습니다.</li>
+        <li class="off"><h3>역사실</h3>우리나라 철도의 탄생 배경부터 현재의 철도로 발전하기까지의 과정을 한눈에 볼 수 있는 전시실입니다 우리나라 주요 철도 간선인 경인선, 경부선, 경의선, 호남선 건설 배경과 발전과정, 한국전쟁과 철도, KTX의 개통 역사를 만나볼 수 있습니다</li>
+        <li class="off"><h3>차량실</h3>우리나라 철도차량의 발전과정을 찾아볼 수 있는 전시실입니다. 동력차, 객차, 화차의 모형과 부속, 제작 공구 등 철도차량 유물전시와 함께 철도모형 디오라마, 열차운전 체험 등 기차 체험도 즐길 수 있습니다.</li>
+        <li class="off"><h3>철도모형 디오라마실</h3>증기기관차, 비둘기호, 새마을호, KTX까지 열차 모형들이 실제 움직이는 모습을 관람할 수 있습니다.</li>
+      </ul>
+      <div class="btn_section">
+        <a href="exhibition01.html" class="btn_link">더 알아보기</a>
+        <button class="btn_prev"><img src="img/btn_leftarrow.png" alt=""></button>
+        <button class="btn_next"><img src="img/btn_rightarrow.png" alt=""></button>
+      </div>
+    </div>
+    
+  </section>
+  <!-- //상설전시 -->
+
+  <!-- 행사 -->
+  <section id="main_event">
+    <div class="container">
+      <div class="sub_title">
+        <h2>특별전&행사</h2>
+        <p>Special Exhibition & Event</p>
+      </div>
+      <article>
+        <div class="event_box now">
+          <img src="img/event01.jpg" alt="">
+          <span>04/21 -06/30</span>
+          <h3>[철도박물관 특별전] 커피로 그린 철도</h3>
+        </div>
+        <div class="event_box">
+          <img src="img/event02.jpg" alt="">
+          <span>12/24 -12/25</span>
+          <h3>[체험전] 성탄절 맞이 종이철도모형 체험전</h3>
+        </div>
+        <div class="event_box">
+          <img src="img/event03.jpg" alt="">
+          <span>07/01 - 09/30</span>
+          <h3>[체험전] 제 21회 어린이 기차 그리기 대회</h3>
+        </div>
+        <div class="event_box">
+          <img src="img/event04.jpg" alt="">
+          <span>09/21 - 09/22</span>
+          <h3>[체험전&전시회] 종이 철도모형 체험전 & 전시회</h3>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- //행사 -->
+
+  <!-- 소장유물 -->
+  <section id="main_archive">
+    <div class="container">
+      <div class="sub_title">
+        <h2>소장 유물</h2>
+        <p>1884년부터 시작된 우리나라 철도의 역사를 한눈에!</p>
+      </div>
+      <a href="archive01.html" class="btn_link">더 알아보기</a>
+    </div>
+
+    <div class="slide_archive">
+      <div class="slide_item arch01">
+        <a href="archive01.html" class="slide_text">대한제국기 철도 통표<img src="img/btn_arrow.png" alt=""></a>
+      </div>
+      <div class="slide_item arch02">
+        <a href="archive01.html" class="slide_text">수도권 전철 개통 1주년 기념패<img src="img/btn_arrow.png" alt=""></a>
+      </div>
+      <div class="slide_item arch03">
+        <a href="archive01.html" class="slide_text">증기기관차 동륜 목형<img src="img/btn_arrow.png" alt=""></a>
+      </div>
+      <div class="slide_item arch04">
+        <a href="archive01.html" class="slide_text">밀착식 연결기<img src="img/btn_arrow.png" alt=""></a>
+      </div>
+      <div class="slide_item arch05">
+        <a href="archive01.html" class="slide_text">도라산역 연동폐색장치 조작반<img src="img/btn_arrow.png" alt=""></a>
+      </div>
+      <div class="slide_item arch06">
+        <a href="archive01.html" class="slide_text">쌍신폐색기<img src="img/btn_arrow.png" alt=""></a>
+      </div>
+      <div class="slide_item arch07">
+        <a href="archive01.html" class="slide_text">스파이크(개못) 체결장치<img src="img/btn_arrow.png" alt=""></a>
+      </div>
+      <div class="slide_item arch08">
+        <a href="archive01.html" class="slide_text">선로검사 기록계<img src="img/btn_arrow.png" alt=""></a>
+      </div>
+    </div>
+
+    <div class="slide_num"></div>
+  </section>
+  <!-- //소장유물 -->
+
+  <!-- 공지사항 -->
+  <section id="main_notice">
+    <div class="container">
+      <div class="sub_title">
+        <h2>박물관 소식</h2>
+        <p>코레일 철도박물관의 새로운 소식을 알려드립니다.</p>
+      </div>
+      <article class="notice">
+        <div class="notice_tit">
+          <h3>공지사항</h3>
+          <a href="notice.html" class="btn_link">더 알아보기</a>
+        </div>
+        <ul class="notice_list">
+          <li class="none"><a href="#none">[공지] 파시5-23호 증기기관차 복원 공사 시행을 알려드립니다.</a></li>
+          <li class="none"><a href="#none">2023 철도축제 안내</a></li>
+          <li class="none"><a href="#none">'커피로 그린 철도' 특별전 안내(4.21~6.30)</a></li>
+          <li class="none"><a href="#none">철도박물관의 상설 체험활동 5가지를 소개합니다.</a></li>
+        </ul>
+      </article>
+      <article class="question">
+        <div class="faq">
+          <h3>faq</h3>
+          <p>자주 묻는 질문을 확인해보세요!</p>
+          <div class="btn_link none">더 알아보기</div>
+        </div>
+        <div class="qna">
+          <h3>q&a</h3>
+          <p>철도박물관에 대해 궁금하신 사항을 남겨주세요.</p>
+          <div class="btn_link none">더 알아보기</div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- //공지사항 -->
+
+  <!-- 푸터 -->
+  <footer>
+    <div class="container">
+      <a href="#"><img src="img/logo_gray.png" alt="로고"></a>
+      <div class="footer_center">
+        <span>사업자등록번호 : 314-82-10024</span>
+        <span>경기도 의왕시 철도박물관로 142</span>
+        <span>대표번호 : 031-461-3610 / 팩스 : 031-460-4322</span>
+        <small>Copyright &copy; KOREA RAILROAD. All Rights Reserved.</small>
+      </div>
+      <div class="footer_right">
+        <ul class="footer_map">
+          <li class="none"><a href="#none">개인정보처리방침</a></li>
+          <li class="none"><a href="#none">자주하는 질문</a></li>
+          <li class="none"><a href="#none">오시는길</a></li>
+          <li class="none"><a href="#none">저작권정보</a></li>
+        </ul>
+        <ul class="footer_sns">
+          <li class="none"><a href="#none"><img src="img/sns1.png" alt="instagram"></a></li>
+          <li class="none"><a href="#none"><img src="img/sns2.png" alt="facebook"></a></li>
+          <li class="none"><a href="#none"><img src="img/sns3.png" alt="youtube"></a></li>
+          <li class="none"><a href="#none"><img src="img/sns4.png" alt="navercafe"></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- //푸터 -->
+</body>
+</html>

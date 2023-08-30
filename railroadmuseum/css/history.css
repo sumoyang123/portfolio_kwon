@@ -1,0 +1,120 @@
+.sub_visual{
+  background: url(../img/sub_visual05.jpg) no-repeat center;
+  background-size: cover;
+}
+main > h2{
+  font-family: 'EsaManru';
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 80px 0 40px;
+}
+.history_list{
+  position: relative;
+  background: url(../img/history_bg.png) no-repeat top;
+  background-size: contain;
+  width: 100%;
+  padding-top: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 120px;
+}
+.history_list::after{
+  content: "";
+  display: block;
+  width: 1px;
+  height: 77%;
+  position: absolute;
+  background-color: #FF5151;
+  left: 50%;
+  top: 224px;
+}
+.history_con h3{
+  font-weight: 700;
+  font-size: 2.5rem;
+  padding-bottom: 12px;
+}
+.history_con p{
+  font-size: 1.125rem;
+  color: #666;
+}
+.history_con{width: 50%;position: relative;}
+.history_con.odd{
+  padding: 0 122px 16px 0;
+  text-align: right;
+}
+.history_con.even{
+  padding: 100px 0 16px 122px;
+}
+.history_con::before{
+  content: "";
+  display: block;
+  width: 70px;
+  height: 1px;
+  background-color: #DEDEDE;
+  position: absolute;
+}
+.history_con::after{
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  border:3px solid #FF5151;
+  position: absolute;
+  z-index: 2;
+}
+.history_con.odd::before{
+  right: 12px;
+  top: 25px;
+}
+.history_con.odd::after{
+  right: 0;
+  top: 13px;
+  transform: translateX(50%);
+}
+.history_con.even::before{
+  left: 12px;
+  top: 125px;
+}
+.history_con.even::after{
+  left: 0;
+  top: 113px;
+  transform: translateX(-50%);
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width:768px){
+  main > h2{font-size: 1.75rem;margin: 40px 0 20px;}
+  .history_list{
+    padding-top: 50px;
+    margin-bottom: 80px;
+  }
+  .history_list::after{
+    left: 98%;
+    top: 70px;
+    height: 85%;
+  }
+  .history_con h3{
+    font-size: 1.25rem;
+    padding-bottom: 2px;
+  }
+  .history_con p{font-size: 1rem;}
+  .history_con{width: 100%;}
+  .history_con.odd,.history_con.even{
+    padding: 0 20px 8px 0;
+    text-align: right;
+  }
+  .history_con.odd::before,.history_con.even::before{
+    right: 2%;top: 25px;left: auto;
+  }
+  .history_con.odd::after,.history_con.even::after{
+    width: 16px;
+    height: 16px;
+    left: auto;
+    right: 2%;
+    top: 17px;
+    transform: translateX(50%);
+  }
+}

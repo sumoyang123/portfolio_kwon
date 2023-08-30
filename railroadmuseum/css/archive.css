@@ -1,0 +1,181 @@
+.sub_visual{
+  background: url(../img/sub_visual03.jpg) no-repeat center;
+  background-size: cover;
+}
+.filter_tap{
+  border-radius: 20px;
+  background-color: #F4F4F4;
+  margin: 60px 0 40px;
+  padding: 28px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.filter{display: flex;}
+.filter li{
+  padding: 12px 30px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.filter li:hover{
+  background-color: #303030;
+  border: 1px solid #303030;
+  color: #fff;
+}
+.filter li.on{
+  background-color: #303030;
+  border: 1px solid #303030;
+  color: #fff;
+}
+.search{
+  display: flex;
+}
+.search input{
+  width: 380px;
+  padding: 12px 10px;
+  outline: 0;
+  border:1px solid #999;
+  border-radius: 6px;
+  margin-right: 20px;
+  font-family: 'SUIT-Regular';
+  color: #999;
+}
+.btn_search{
+  padding: 12px 30px;
+  border-radius: 6px;
+  background-color: #303030;
+  color: #fff;
+  cursor: pointer;
+}
+.archive_wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.archive_box{
+  width: 24%;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 24px;
+}
+.archive_img{
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.archive_box:hover .archive_img{
+  transform: scale(1.25);
+}
+.archive_box p{
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+  font-size: 1.125rem;
+  position: absolute;
+  left: 0;bottom: 0;
+}
+.arch01{
+  background: url(../img/archive01.jpg) no-repeat center;
+  background-size: contain;
+}
+.arch02{
+  background: url(../img/archive02.jpg) no-repeat center;
+  background-size: contain;
+}
+.arch03{
+  background: url(../img/archive03.jpg) no-repeat center;
+  background-size: contain;
+}
+.arch04{
+  background: url(../img/archive04.jpg) no-repeat center;
+  background-size: contain;
+}
+.arch05{
+  background: url(../img/archive05.jpg) no-repeat center;
+  background-size: contain;
+}
+.arch06{
+  background: url(../img/archive06.jpg) no-repeat center;
+  background-size: contain;
+}
+.arch07{
+  background: url(../img/archive07.jpg) no-repeat center;
+  background-size: contain;
+}
+.arch08{
+  background: url(../img/archive08.jpg) no-repeat center;
+  background-size: contain;
+}
+.arch09{
+  background: url(../img/archive09.jpg) no-repeat center;
+  background-size: contain;
+}
+.arch10{
+  background: url(../img/archive10.jpg) no-repeat center;
+  background-size: contain;
+}
+.arch11{
+  background: url(../img/archive11.jpg) no-repeat center;
+  background-size: contain;
+}
+.arch12{
+  background: url(../img/archive12.jpg) no-repeat center;
+  background-size: contain;
+}
+.pagenation{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 120px;
+}
+.pagenation img{cursor: pointer;}
+.pagenation ul{display: flex;}
+.pagenation li{
+  width: 36px;
+  line-height: 36px;
+  border-radius: 6px;
+  border:1px solid;
+  text-align: center;
+  margin: 0 8px;
+}
+.pagenation li.on{cursor: pointer;}
+.pagenation li.on{
+  border: 1px solid #303030;
+  background-color: #303030;
+  color: #fff;
+}
+
+@media screen and (max-width:768px){
+  main{font-size: 0.875rem;}
+  .filter_tap{
+    margin: 40px 0 20px;
+    padding: 10px 12px;
+  }
+  .filter{
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .filter li{
+    width: 45%;
+    padding: 0;
+    text-align: center;
+    line-height: 28px;
+    margin: 0;
+  }
+  .search{display: none;}
+  .archive_box{width: 100%;}
+  .pagenation{margin-bottom: 60px;}
+  .pagenation img{width: 24px;}
+  .pagenation li{
+    width: 24px;
+    line-height: 24px;
+    margin: 0 4px;
+  }
+}

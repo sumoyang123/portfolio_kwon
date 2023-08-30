@@ -1,0 +1,28 @@
+@charset "utf-8";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* 초기화 */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,ol,li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+img{
+  width: auto;
+  vertical-align: top;
+  max-width: 100%;
+}
+body{
+  font-family: 'Pretendard',sans-serif;
+  color: #fff;
+  background-color: #1D1D1D;
+  font-size: 1rem;
+}

@@ -1,0 +1,220 @@
+@charset "utf-8";
+
+.intro--banner h1 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 900;
+}
+.intro--options {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+}
+
+.aboutme {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.aboutme h2 {
+  width: 100%;
+}
+.aboutme h3 {
+  font-size: 20px;
+  color: #f7a50f;
+}
+.aboutme .education,
+.aboutme .certificate {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.aboutme ul {
+  list-style: none;
+  padding: 0;
+}
+.education ul {
+  margin-right: 120px;
+}
+.about-list li {
+  display: flex;
+  align-items: start;
+  margin-bottom: 12px;
+}
+.about-list li h4 {
+  margin: 0 10px 0 0;
+  font-size: 16px;
+  color: #585858;
+  font-weight: 300;
+}
+.about-list li p {
+  margin: 0;
+  font-size: 16px;
+  color: #313131;
+  font-weight: 700;
+}
+
+.slider--item {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.slider--item-center:hover .slider--item-image > img {
+  transform: scale(1.2);
+}
+.slider--item-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.slider--item-center .slider--item-image:hover .slider--item-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider--item-center .slider--item-link a {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 1px solid;
+  border-radius: 50%;
+  margin-top: 120px;
+  margin-right: 10px;
+  position: relative;
+}
+.slider--item-center .slider--item-link a:last-child {
+  margin-right: 0;
+}
+.slider--item-center .hompage-link:hover::before {
+  content: "웹사이트 보기";
+  display: block;
+  width: 72px;
+  position: absolute;
+  top: -40px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  padding: 4px 8px;
+  color: #1d1d1d;
+}
+.slider--item-center .plan-link:hover::before {
+  content: "기획서보기";
+  display: block;
+  width: 72px;
+  position: absolute;
+  top: -40px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  padding: 4px 8px;
+  color: #1d1d1d;
+}
+.slider--item-center .image-link:hover::before {
+  content: "이미지보기";
+  display: block;
+  width: 72px;
+  position: absolute;
+  top: -40px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  padding: 4px 8px;
+  color: #1d1d1d;
+}
+.slider--item-center .download-link:hover::before {
+  content: "다운로드";
+  display: block;
+  width: 72px;
+  position: absolute;
+  top: -40px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  padding: 4px 8px;
+  color: #1d1d1d;
+}
+
+.hire {
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+}
+.hire h2 {
+  font-size: 24px;
+}
+.email {
+  display: flex;
+  padding: 0 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+.email h3 {
+  font-size: 48px;
+  font-weight: 700;
+}
+.email a {
+  display: block;
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background-color: #f7a50f;
+  border-radius: 4px;
+  position: relative;
+}
+.clip-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  border-radius: 16px;
+  background-color: #fad693;
+  color: #1d1d1d;
+  font-size: 20px;
+  font-weight: 500;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.chart-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.donut-chart {
+  width: 160px;
+  height: 160px;
+  margin: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.donut-chart.percent-90 {
+  background: conic-gradient(#ffb52b 0% 90%, #fff8de 90% 100%);
+}
+.donut-chart.percent-80 {
+  background: conic-gradient(#ffb52b 0% 80%, #fff8de 80% 100%);
+}
+.donut-chart.percent-70 {
+  background: conic-gradient(#ffb52b 0% 70%, #fff8de 70% 100%);
+}
+.donut-chart-center {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #fff8de;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.donut-chart-center img {
+  width: 48px;
+}

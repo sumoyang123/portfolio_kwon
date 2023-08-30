@@ -1,0 +1,91 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.panolens-container {
+  width: 100%;
+  height: 100%;
+}
+/* 팝업 */
+.popup {
+  position: fixed;
+  top: 40%;
+  left: 50px;
+  transition: 2s;
+  z-index: 999;
+}
+.popup_inner {
+  width: 1200px;
+  height: 800px;
+  position: absolute;
+  top: 10vh;
+  left: 15vw;
+  padding: 50px;
+  background-color: rgb(29 77 91 / 80%);
+  border: 2px solid white;
+  border-radius: 50px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.popup .btn-close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
+  width: 30px;
+}
+.popup .text {
+  height: 100%;
+  color: #fff;
+  margin-left: 40px;
+  overflow: hidden;
+}
+.book-list {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  overflow: scroll;
+  overflow-x: hidden ;
+}
+.book-list::-webkit-scrollbar {width: 15px;}
+.book-list::-webkit-scrollbar-thumb {
+  height: 20%; /* 스크롤바의 길이 */
+  background: #fff; /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+.book-list::-webkit-scrollbar-track {
+  background: rgba(33, 198, 174, 0.2);
+  border-radius: 10px;
+}
+.book-cover {
+  width: 30%;
+}
+.book {
+  width: 100%;
+  display: flex;
+  gap: 10%;
+  align-items: center;
+}
+.book-info h4 {
+  font-size: 18px;
+  padding-bottom: 2rem;
+}
+.book-info {
+  line-height: 1.7rem;
+}
+.popup .text h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.popup .text h3 {
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
