@@ -62,11 +62,16 @@
   overflow: hidden;
   position: relative;
   margin-bottom: 24px;
+  cursor: pointer;
+  transition: 0.5s;
 }
 .archive_img{
   width: 100%;
   height: 100%;
   transition: 0.5s;
+}
+.archive_box:hover{
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 .archive_box:hover .archive_img{
   transform: scale(1.25);

@@ -337,6 +337,7 @@
 }
 .notice_list a{
   display: block;
+  min-height: 196px;
   padding: 36px 30px;
   border-radius: 10px;
   background-color: #f3f3f3;
@@ -433,7 +434,7 @@
   .notice_tit h3{font-size: 1.5rem;}
   .notice_list{flex-wrap: wrap;}
   .notice_list li{width: calc(50% - 8px);margin-bottom: 12px;}
-  .notice_list a{font-size: 1.125rem;}
+  .notice_list a{font-size: 1.125rem; min-height: initial;}
   .notice_list a::before,.notice_list a::after{font-size: 1rem;}
   .question h3{font-size: 1.5rem;}
   .question p{font-size: 1rem;}
