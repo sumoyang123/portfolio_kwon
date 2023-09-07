@@ -129,7 +129,8 @@
 #main_exhibition .sub_title p{color: #B6B6B6;}
 .exhib_right{
   width: 30%;
-  margin: 120px 12.5% 0 4%;
+  margin: 120px 12.5% 0 62px;
+  position: relative;
 }
 .exhibit_text h3{
   font-size: 1.75rem;
@@ -137,15 +138,18 @@
   padding-bottom: 16px;
 }
 .exhibit_text li.off{display: none;}
-.btn_section{padding-top: 32px;}
+.btn_section{
+  position: absolute;
+  bottom: 120px;
+}
 .btn_section button{
   background-color:transparent;
   outline: 0; border: 0;
   cursor: pointer;
-  margin: 80px 20px 0 0;
+  margin: 40px 20px 0 0;
 }
 .exhibit_slidewrap{
-  width: 62.5%;
+  width: 1196px;
   height: 645px;
   overflow: hidden;
   border-radius: 0 0 60px 0;
@@ -417,8 +421,6 @@
     top: 0;
   }
   .info_ticket::after{font-size: 0.9rem;}
-
-  /*  */
 
   .event_box > img{margin-bottom: 12px;}
   .event_box > span,.event_box > span::after{font-size: 0.75rem;}

@@ -16,7 +16,7 @@ $(function(){
   //상설전시
   let $now = 1201;
 
-  $('.exhibit_slidearea').prepend($('.exhibit_slidearea li:last-child')).css({'margin-left':'-815px'});
+  $('.exhibit_slidearea').prepend($('.exhibit_slidearea li:last-child')).css({'margin-left':$('.exhibit_slidewrap').width() - 1666});
 
   $('.btn_next').click(function(){
     $now++;
@@ -36,8 +36,8 @@ $(function(){
       $('.exhibit_text li:nth-child(4)').removeClass('off');
     }
 
-    $('.exhibit_slidearea').animate({'margin-left':'-1630px'},500,function(){
-      $('.exhibit_slidearea').append($('.exhibit_slidearea li:first-child')).css({'margin-left':'-815px'});
+    $('.exhibit_slidearea').animate({'margin-left': $('.exhibit_slidewrap').width() - 2499},500,function(){
+      $('.exhibit_slidearea').append($('.exhibit_slidearea li:first-child')).css({'margin-left':$('.exhibit_slidewrap').width() - 1666});
     });
   });
   $('.btn_prev').click(function(){
@@ -54,12 +54,12 @@ $(function(){
       $('.exhibition_bg').css({"background-image": "url(img/exhibitbg03.jpg)"});
       $('.exhibit_text li:nth-child(3)').removeClass('off');
     }else {
-      $('.exhibition_bg').css({"background-image": "url(img/exhibitbg04.jpg)"});
+      $('.exhibition_bg').css({"background-image": "url(img/exhibitbg05.jpg)"});
       $('.exhibit_text li:nth-child(4)').removeClass('off');
     }
 
-    $('.exhibit_slidearea').animate({'margin-left':'0'},500,function(){
-      $('.exhibit_slidearea').prepend($('.exhibit_slidearea li:last-child')).css({'margin-left':'-815px'});
+    $('.exhibit_slidearea').animate({'margin-left':$('.exhibit_slidewrap').width() - 833},500,function(){
+      $('.exhibit_slidearea').prepend($('.exhibit_slidearea li:last-child')).css({'margin-left':$('.exhibit_slidewrap').width() - 1666});
     });
   });
 
