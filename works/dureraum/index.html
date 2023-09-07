@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영화의 전당</title>
+    <!-- favicon -->
+    <link rel="icon" href="./img/favicon.ico" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./js/script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="mouse__cursor"></div>
+    <div class="mouse__cursor2"></div>
+    <!-- header -->
+    <header>
+      <!-- <div class="cursor_more"></div>
+      <div class="cursor_drag"></div> -->
+
+      <h1 class="logo">
+        <a href="./index.html"><img src="./img/header-logo.svg" alt="영화의 전당" title="홈으로 가기" /></a>
+      </h1>
+      <nav class="menu">
+        <div class="gnb">
+          <ul class="depth1">
+            <li class="depth1-li">
+              <a href="./movie-list.html">영화</a>
+              <ul class="depth2">
+                <li><a href="./movie-list.html">상영일정</a></li>
+                <li>
+                  <a href="#">전체영화</a>
+                  <ul class="depth3">
+                    <li><a href="#">전체상영작</a></li>
+                    <li><a href="#">현재상영작</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">비평</a></li>
+              </ul>
+            </li>
+            <li class="depth1-li">
+              <a href="./ticket.html">공연&#183;전시</a>
+              <ul class="depth2">
+                <li>
+                  <a href="#">일정</a>
+                  <ul class="depth3">
+                    <li><a href="#">공연일정</a></li>
+                    <li><a href="#">전시&#183;행사일정</a></li>
+                  </ul>
+                </li>
+                <li><a href="./ticket.html">예매안내</a></li>
+              </ul>
+            </li>
+            <li class="depth1-li">
+              <a href="./academy.html">아카데미</a>
+              <ul class="depth2">
+                <li><a href="#">아카데미 일정</a></li>
+                <li><a href="#">영화 아카데미</a></li>
+                <li><a href="#">예술 아카데미</a></li>
+                <li><a href="#">어린이청소년 아카데미</a></li>
+                <li><a href="#">시설/기자재</a></li>
+                <li><a href="#">사용신청</a></li>
+              </ul>
+            </li>
+            <li class="depth1-li">
+              <a href="./notice.html">커뮤니티</a>
+              <ul class="depth2">
+                <li><a href="./notice.html">공지사항</a></li>
+                <li><a href="#">언론보도</a></li>
+                <li>
+                  <a href="#">웹진</a>
+                  <ul class="depth3">
+                    <li><a href="#">뉴스레터</a></li>
+                    <li><a href="#">월간지</a></li>
+                    <li><a href="#">계간지</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">갤러리</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">자유게시판</a></li>
+              </ul>
+            </li>
+            <li class="depth1-li">
+              <a href="./facility.html">대관</a>
+              <ul class="depth2">
+                <li>
+                  <a href="#">대관안내</a>
+                  <ul class="depth3">
+                    <li><a href="#">대관일정</a></li>
+                    <li><a href="#">대관절차</a></li>
+                    <li><a href="#">대관규정</a></li>
+                    <li><a href="#">대관료</a></li>
+                  </ul>
+                </li>
+                <li><a href="./facility.html">대관시설안내</a></li>
+                <li><a href="#">대관신청</a></li>
+              </ul>
+            </li>
+            <li class="depth1-li">
+              <a href="./greeting.html">영화의 전당</a>
+              <ul class="depth2">
+                <li><a href="./greeting.html">인사말 및 연혁</a></li>
+                <li><a href="#">CI 소개</a></li>
+                <li>
+                  <a href="#">시설안내</a>
+                  <ul class="depth3">
+                    <li><a href="#">좌석배치도</a></li>
+                    <li><a href="#">건축개요</a></li>
+                    <li><a href="#">편의시설</a></li>
+                    <li><a href="#">오시는길</a></li>
+                    <li><a href="#">주차안내</a></li>
+                    <li><a href="#">영화도서관</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">조직기구</a></li>
+                <li><a href="#">운영방향</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header-link-wrap">
+        <ul class="header-link">
+          <li><a href="#">고객센터</a></li>
+          <li><a href="#">멤버십</a></li>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+        </ul>
+      </div>
+
+      <div class="btn">
+        <button class="search">검색</button>
+        <div class="header_search">
+          <form name="searchFrm" method="get" action="">
+            <input type="text" name="keyword" id="schword" value placeholder="검색어를 입력해주세요." />
+            <button type="submit">검색하기</button>
+          </form>
+        </div>
+        <div class="allMenu">
+          <div class="allmenu-wrap">
+            <button class="allmenu">모든메뉴</button>
+          </div>
+        </div>
+
+        <!-- 사이트맵 -->
+        <div class="header_sitemap">
+          <div class="header_sitemap-cont layout">
+            <a href="#" class="close">사이트맵 닫기</a>
+            <div class="header_sitemap-btn">
+              <a href="#">로그인</a>
+              <a href="#">회원가입</a>
+              <a href="#">아카이브</a>
+            </div>
+            <ul class="list">
+              <li>
+                <p class="title">영화</p>
+                <ul>
+                  <li><a href="./movie-list.html">상영일정</a></li>
+                  <li><a href="#">전체영화</a></li>
+                  <li><a href="#">비평</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">공연·전시</p>
+                <ul>
+                  <li><a href="#">일정</a></li>
+                  <li><a href="./ticket.html">예매안내</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">아카데미</p>
+                <ul>
+                  <li><a href="#">아카데미 일정</a></li>
+                  <li><a href="#">영화 아카데미</a></li>
+                  <li><a href="#">예술 아카데미</a></li>
+                  <li><a href="#">어린이청소년 아카데미</a></li>
+                  <li><a href="#">시설/기자재</a></li>
+                  <li><a href="#">사용신청</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">커뮤니티</p>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">언론보도</a></li>
+                  <li><a href="#">웹진</a></li>
+                  <li><a href="#">갤러리</a></li>
+                  <li><a href="#">이벤트</a></li>
+                  <li><a href="#">자유게시판</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">대관</p>
+                <ul>
+                  <li><a href="#">대관안내</a></li>
+                  <li><a href="./facility.html">대관시설안내</a></li>
+                  <li><a href="#">대관신청</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">영화의 전당</p>
+                <ul>
+                  <li><a href="./greeting.html">인사말 및 연혁</a></li>
+                  <li><a href="#">CI소개</a></li>
+                  <li><a href="#">시설안내</a></li>
+                  <li><a href="#">조직기구</a></li>
+                  <li><a href="#">운영방향</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- //사이트맵 -->
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 퀵메뉴 -->
+    <div class="quick">
+      <div class="quick_link">
+        <ul>
+          <li class="library"><a href="#none" class="footer_link" title="영화도서관">영화도서관</a></li>
+          <li class="event"><a href="#none" class="footer_link" title="이벤트">이벤트</a></li>
+          <li class="seat"><a href="#none" class="footer_linkt" title="좌석배치도">좌석배치도</a></li>
+          <li class="guide"><a href="#none" class="footer_link" title="장애인 이용안내">장애인 이용안내</a></li>
+          <li class="contact"><a href="#none" class="footer_link" title="오시는 길">오시는길</a></li>
+        </ul>
+      </div>
+      <div class="quick_sns">
+        <ul>
+          <li class="insta"><a href="https://www.instagram.com/dureraum/" target="_blank" class="footer_sns">인스타그램</a></li>
+          <li class="fb"><a href="https://www.facebook.com/ilovedureraumpage" target="_blank" class="footer_sns">페이스북</a></li>
+          <li class="ytb"><a href="https://www.youtube.com/user/Dureraum" target="_blank" class="footer_sns">유튜브</a></li>
+          <li class="blog"><a href="https://blog.naver.com/busancinema" target="_blank" class="footer_sns">블로그</a></li>
+        </ul>
+        <a href="#" onclick="window.scrollTo(0,0); return false;" class="btn-top">상단으로 가기</a>
+      </div>
+    </div>
+    <!-- //퀵메뉴 -->
+
+    <!-- main -->
+
+    <!-- 메인비디오 -->
+    <main class="content-wrap" style="background: #fff">
+      <div class="mainvisual">
+        <video loop autoplay muted id="mainvideo">
+          <source src="source/mainvideo.mp4" type="video/mp4" />
+        </video>
+        <div class="maintext">
+          <p class="opacity">시민들과 함께하는 문화예술공간</p>
+          <p class="strong">영화의 전당</p>
+        </div>
+      </div>
+      <!-- //메인비디오 -->
+
+      <!-- 상영작목록 섹션 -->
+      <section class="movie">
+        <div class="datepick">
+          <div class="tit-wrap">
+            <a href="movie-list.html"><p class="title">2023.08</p></a>
+          </div>
+          <div class="date-wrap">
+            <div class="prev">이전</div>
+            <ul>
+              <li><a href="#none">19일</a></li>
+              <li><a href="#none">20일</a></li>
+              <li><a href="#none">21일</a></li>
+              <li><a href="#none">22일</a></li>
+              <li class="select"><a href="#none">23일</a></li>
+              <li><a href="#none">24일</a></li>
+              <li><a href="#none">25일</a></li>
+              <li><a href="#none">26일</a></li>
+              <li><a href="#none">27일</a></li>
+            </ul>
+            <div class="next">다음</div>
+          </div>
+        </div>
+        <div class="poster page-wrap">
+          <div class="swiper mySwiper swiper1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="movie-list.html">
+                  <img src="img/poster-oppenheimer.jpg" alt="오펜하이머" />
+                  <div class="info">
+                    <h3>오펜하이머</h3>
+                    <div class="line"></div>
+                    <div class="more_btn">자세히 보기</div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="movie-list.html">
+                  <img src="img/poster-milsu.jpg" alt="밀수" />
+                  <div class="info">
+                    <h3>밀수</h3>
+                    <div class="line"></div>
+                    <div class="more_btn">자세히 보기</div>
+                  </div></a
+                >
+              </div>
+
+              <div class="swiper-slide">
+                <a href="movie-list.html">
+                  <img src="img/movie1.jpg" alt="콘크리트 유토피아" />
+                  <div class="info">
+                    <h3>콘크리트 유토피아</h3>
+                    <div class="line"></div>
+                    <div class="more_btn">자세히 보기</div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="movie-list.html">
+                  <img src="img/movie4.jpg" alt="달짝지근해" />
+                  <div class="info">
+                    <h3>달짝지근해</h3>
+                    <div class="line"></div>
+                    <div class="more_btn">자세히 보기</div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="movie-list.html">
+                  <img src="img/poster-Ennio.jpg" alt="엔니오: 더 마에스트로" />
+                  <div class="info">
+                    <h3>엔니오: 더 마에스트로</h3>
+                    <div class="line"></div>
+                    <div class="more_btn">자세히 보기</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"></div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <!-- //상영작목록 섹션 -->
+
+      <!-- 프로그램 섹션 -->
+      <section class="program page-wrap">
+        <h2 class="sec-tit">추천 프로그램</h2>
+        <div class="banner-wrap">
+          <ul class="program-list">
+            <li animate="fade-up" class="on">
+              <a href="movie-list.html">
+                <div class="img-area">
+                  <!-- 픽쳐 태그 삭제//08.31 16:02 -->
+                  <!-- 이미지 태그 삭제//09.04 13:10 -->
+                  <div class="cover-wrap">
+                    <div class="cover">
+                      <div class="title">영화</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-area">
+                  <p class="ban-tit">영화</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="program-list">
+            <li animate="fade-up" class="on">
+              <a href="ticket.html">
+                <div class="img-area">
+                  <div class="cover-wrap">
+                    <div class="cover">
+                      <div class="title">공연</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-area">
+                  <p class="ban-tit">공연</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="program-list">
+            <li animate="fade-up" class="on">
+              <a href="ticket.html">
+                <div class="img-area">
+                  <div class="cover-wrap">
+                    <div class="cover">
+                      <div class="title">전시</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-area">
+                  <p class="ban-tit">전시</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- //프로그램 섹션 -->
+
+      <!-- 극장시설 섹션 -->
+      <section class="theater page-wrap">
+        <h2 class="sec-tit">극장시설</h2>
+        <div class="swiper-container">
+          <div class="swiper mySwiper swiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="facility.html">
+                  <div class="theater-img">
+                    <img src="./img/theater1.png" alt="야외극장" />
+                  </div>
+                  <p class="theater-tit">
+                    <span>야외극장</span>
+                  </p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="facility.html">
+                  <div class="theater-img">
+                    <img src="./img/theater2.png" alt="중극장" />
+                  </div>
+                  <p class="theater-tit">
+                    <span>중극장</span>
+                  </p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="facility.html">
+                  <div class="theater-img">
+                    <img src="./img/theater3.png" alt="하늘연극장" />
+                  </div>
+                  <p class="theater-tit">
+                    <span>하늘연극장</span>
+                  </p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="facility.html">
+                  <div class="theater-img">
+                    <img src="./img/theater4.png" alt="소극장" />
+                  </div>
+                  <p class="theater-tit">
+                    <span>소극장</span>
+                  </p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="facility.html">
+                  <div class="theater-img">
+                    <img src="./img/theater5.png" alt="시네마테크" />
+                  </div>
+                  <p class="theater-tit">
+                    <span>시네마테크</span>
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"></div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <!-- //극장시설 섹션 -->
+
+      <!-- 뉴스 섹션 -->
+      <!-- 새로운 구조 news -->
+      <section class="news page-wrap">
+        <h2 class="sec-tit">소식</h2>
+        <div class="tabs">
+          <ul>
+            <li><a class="notice">공지사항</a></li>
+            <li><a class="report">보도자료</a></li>
+            <li><a class="gall on">갤러리</a></li>
+          </ul>
+          <a href="#" class="more">더보기</a>
+        </div>
+        <div class="gallery-wrap">
+          <article class="gallery-item">
+            <a href="#" class="">
+              <span class="tit">무대인사 &lt;여교사&gt;</span>
+              <p class="date">2023.02.08</p>
+              <div class="gallery_img">
+                <img src="img/main-gallery1.jpg" alt="무대인사" />
+              </div>
+            </a>
+          </article>
+          <article class="gallery-item">
+            <a href="#" class="">
+              <span class="tit">1월 팝콘톡톡 플러스 &lt;요요마와 실크로드 앙상블&gt;</span>
+              <p class="date">2023.01.18</p>
+              <div class="gallery_img">
+                <img src="img/main-gallery2.jpg" alt="무대인사" />
+              </div>
+            </a>
+          </article>
+          <article class="gallery-item">
+            <a href="#" class="">
+              <span class="tit">부산국제영화제 20주년 기념 시네마 음악회</span>
+              <p class="date">2022.10.08</p>
+              <div class="gallery_img">
+                <img src="img/main-gallery3.jpg" alt="무대인사" />
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+      <!-- //뉴스 섹션 -->
+    </main>
+    <!-- //main -->
+
+    <!-- footer -->
+    <footer class="footer-wrap">
+      <div class="footer-top">
+        <div class="footer-top-inner page-wrap">
+          <p>COPYRIGHT(C) BUSAN CINEMA CENTER. ALL RIGHTS RESERVED</p>
+          <div class="footer__top-item">
+            <div class="sns_link">
+              <a href="https://www.instagram.com/dureraum/" target="_blank" title="새창 열림" class="footer_sns insta">인스타그램</a>
+              <a href="https://www.facebook.com/ilovedureraumpage" target="_blank" title="새창 열림" class="footer_sns fb">페이스북</a>
+              <a href="https://www.youtube.com/user/Dureraum" target="_blank" title="새창 열림" class="footer_sns ytb">유튜브</a>
+              <a href="https://blog.naver.com/busancinema" target="_blank" title="새창 열림" class="footer_sns blog">블로그</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom page-wrap">
+        <div class="footer-logo" onclick="location.href='./index.html';"><img src="img/bottom-logo.png" alt="로고" /></div>
+        <div class="info">
+          <p>
+            (우)48058 부산광역시 해운대구 수영강변대로 120 영화의전당(우동 1467번지)<br />
+            TEL. 051-780-6000/6080 Fax. 051-780-6019<br />(재)영화의전당 대표자 김진해 사업자번호 : 617-82-11427<br />통신판매업신고 : 부산해운 제0510호
+          </p>
+        </div>
+        <div>
+          <ul class="footer-bottom-link">
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">윤리경영</a></li>
+            <li><a href="#">제휴</a></li>
+            <li><a href="#">정보공개</a></li>
+            <li><a href="#">채용</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- //footer -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="js/swiper.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/mouse.js"></script>
+  </body>
+</html>

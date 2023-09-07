@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영화의 전당</title>
+    <!-- favicon -->
+    <link rel="icon" href="./img/favicon.ico" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--페이지에 맞게 수정해서 쓰기-->
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <h1 class="logo">
+        <a href="#"><img src="./img/header-logo.png" alt="영화의 전당" /></a>
+      </h1>
+      <nav class="menu">
+        <div class="gnb">
+          <ul class="depth1">
+            <li>
+              <a href="#">영화</a>
+              <ul class="depth2">
+                <li><a href="#">상영일정</a></li>
+                <li>
+                  <a href="#">전체영화</a>
+                  <ul class="depth3">
+                    <li><a href="#">전체상영작</a></li>
+                    <li><a href="#">현재상영작</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">비평</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">공연&#183;전시</a>
+              <ul class="depth2">
+                <li>
+                  <a href="#">일정</a>
+                  <ul class="depth3">
+                    <li><a href="#">공연일정</a></li>
+                    <li><a href="#">전시&#183;행사일정</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">예매안내</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">아카데미</a>
+              <ul class="depth2">
+                <li><a href="#">아카데미 일정</a></li>
+                <li><a href="#">영화 아카데미</a></li>
+                <li><a href="#">예술 아카데미</a></li>
+                <li><a href="#">어린이청소년 아카데미</a></li>
+                <li><a href="#">시설/기자재</a></li>
+                <li><a href="#">사용신청</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">커뮤니티</a>
+              <ul class="depth2">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">언론보도</a></li>
+                <li>
+                  <a href="#">웹진</a>
+                  <ul class="depth3">
+                    <li><a href="#">뉴스레터</a></li>
+                    <li><a href="#">월간지</a></li>
+                    <li><a href="#">계간지</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">갤러리</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">자유게시판</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">대관</a>
+              <ul class="depth2">
+                <li>
+                  <a href="#">대관안내</a>
+                  <ul class="depth3">
+                    <li><a href="#">대관일정</a></li>
+                    <li><a href="#">대관절차</a></li>
+                    <li><a href="#">대관규정</a></li>
+                    <li><a href="#">대관료</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">대관시설소개</a></li>
+                <li><a href="#">대관신청</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">영화의 전당</a>
+              <ul class="depth2">
+                <li><a href="#">인사말 및 연혁</a></li>
+                <li><a href="#">CI 소개</a></li>
+                <li>
+                  <a href="#">시설안내</a>
+                  <ul class="depth3">
+                    <li><a href="#">좌석배치도</a></li>
+                    <li><a href="#">건축개요</a></li>
+                    <li><a href="#">편의시설</a></li>
+                    <li><a href="#">오시는길</a></li>
+                    <li><a href="#">주차안내</a></li>
+                    <li><a href="#">영화도서관</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">조직기구</a></li>
+                <li><a href="#">운영방향</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header-link-wrap">
+        <ul class="header-link">
+          <li><a href="#">고객센터</a></li>
+          <li><a href="#">멤버십</a></li>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+        </ul>
+      </div>
+
+      <div class="btn">
+        <button class="search">검색</button>
+        <div class="header_search">
+          <form name="searchFrm" method="get" action="">
+            <input type="text" name="keyword" id="schword" value placeholder="검색어를 입력해주세요." />
+            <button type="submit">검색하기</button>
+          </form>
+        </div>
+        <div class="allMenu">
+          <div class="allmenu-wrap">
+            <button class="allmenu">모든메뉴</button>
+          </div>
+        </div>
+
+        <!-- 사이트맵 -->
+        <div class="header_sitemap">
+          <div class="header_sitemap-cont layout">
+            <a href="#" class="close">사이트맵 닫기</a>
+            <div class="header_sitemap-btn">
+              <a href="#">로그인</a>
+              <a href="#">회원가입</a>
+              <a href="#">아카이브</a>
+            </div>
+            <ul class="list">
+              <li>
+                <p class="title">영화</p>
+                <ul>
+                  <li><a href="#">상영일정</a></li>
+                  <li><a href="#">전체영화</a></li>
+                  <li><a href="#">비평</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">공연·전시</p>
+                <ul>
+                  <li><a href="#">일정</a></li>
+                  <li><a href="#">예매안내</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">아카데미</p>
+                <ul>
+                  <li><a href="#">아카데미 일정</a></li>
+                  <li><a href="#">영화 아카데미</a></li>
+                  <li><a href="#">예술 아카데미</a></li>
+                  <li><a href="#">어린이청소년 아카데미</a></li>
+                  <li><a href="#">시설/기자재</a></li>
+                  <li><a href="#">사용신청</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">커뮤니티</p>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">언론보도</a></li>
+                  <li><a href="#">웹진</a></li>
+                  <li><a href="#">갤러리</a></li>
+                  <li><a href="#">이벤트</a></li>
+                  <li><a href="#">자유게시판</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">대관</p>
+                <ul>
+                  <li><a href="#">대관안내</a></li>
+                  <li><a href="#">대관시설소개</a></li>
+                  <li><a href="#">대관신청</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">영화의 전당</p>
+                <ul>
+                  <li><a href="#">인사말 및 연혁</a></li>
+                  <li><a href="#">CI소개</a></li>
+                  <li><a href="#">시설안내</a></li>
+                  <li><a href="#">조직기구</a></li>
+                  <li><a href="#">운영방향</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- //사이트맵 -->
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 퀵메뉴 -->
+    <div class="quick">
+      <div class="quick_link">
+        <ul>
+          <li class="library"><a href="#" class="footer_link">영화도서관</a></li>
+          <li class="event"><a href="#" class="footer_link">이벤트</a></li>
+          <li class="seat"><a href="#" class="footer_linkt">좌석배치도</a></li>
+          <li class="guide"><a href="#" class="footer_link">장애인 이용안내</a></li>
+          <li class="contact"><a href="#" class="footer_link">오시는길</a></li>
+        </ul>
+      </div>
+      <div class="quick_sns">
+        <ul>
+          <li class="insta"><a href="https://www.instagram.com/dureraum/" target="_blank" class="footer_sns">인스타그램</a></li>
+          <li class="fb"><a href="https://www.facebook.com/ilovedureraumpage" target="_blank" class="footer_sns">페이스북</a></li>
+          <li class="ytb"><a href="https://www.youtube.com/user/Dureraum" target="_blank" class="footer_sns">유튜브</a></li>
+          <li class="blog"><a href="https://blog.naver.com/busancinema" target="_blank" class="footer_sns">블로그</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- //퀵메뉴 -->
+
+    <!-- main -->
+    <main class="content-wrap">
+      <!-- 본문: 여기부터 콘텐츠 삽입 -->
+
+      <!-- 탭바 있는거 -->
+      <div class="sub-page-tit ">
+        <div class="sub-top page-wrap">
+          <h2 class="tit">서브페이지제목</h2>
+          <ul class="breadcrumb">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+          </ul>
+        </div>
+        <div class="sub-bot page-wrap">
+          <ul class="tab-bar">
+            <li><a href="#" class="on">탭1</a></li>
+            <li><a href="#">탭2</a></li>
+            <li><a href="#">탭3</a></li>
+            <li><a href="#">탭4</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- 탭바 없는거 -->
+      <div class="sub-page-tit page-wrap">
+        <div class="sub-top">
+          <h2 class="tit">서브페이지제목</h2>
+          <ul class="breadcrumb">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+          </ul>
+        </div>
+        <div class="sub-bot no-tab">
+        </div>
+      </div>
+    </main>
+    <!-- //main -->
+
+    <!-- footer -->
+    <footer class="footer-wrap">
+      <div class="footer-top">
+        <span><a href="#">top</a></span>
+        <p>COPYRIGHT(C) BUSAN CINEMA CENTER. ALL RIGHTS RESERVED</p>
+        <div class="footer__top-item">
+          <!-- <select class="footer__top-family">
+              <option>FAMILY SITE</option>
+              <option value="https://www.busan.go.kr/index">부산 광역시</option>
+              <option value="https://www.kofic.or.kr/kofic/business/main/main.do">영화진흥위원회</option>
+              <option value="https://www.kmrb.or.kr/main.do">영상물등급위원회</option>
+              <option value="https://www.bto.or.kr/kor/Main.do">부산관광공사</option>
+              <option value="https://edu.beti.go.kr/main.do">부산광역시교육청교육연수원</option>
+              <option value="https://home.pen.go.kr/becs/main.do">부산광역시교육청학생교육문화회관</option>
+              <option value="http://www.fobst.org/kor/index.php">부산과학기술협의회</option>
+              <option value="http://bslabors.or.kr/#">부산노동권익센터</option>
+              <option value="https://www.bluelinepark.com/">해운대블루라인파크</option>
+              <option value="https://www.biff.kr/kor/">부산국제영화제</option>
+              <option value="https://www.bscc.or.kr/main/">부산문화회관</option>
+              <option value="https://busanbom.modoo.at/">부산영화체험박물관</option>
+              <option value="http://www.bscf.or.kr/main.do">부산문화재단</option>
+              <option value="http://www.unescobusan.org/unesco/main/main.do?mId=1">창의도시부산</option>
+              <option value="http://jabongi.kr/">해운대구자원봉사센터</option>
+              
+              <option value="http://www.bfc.or.kr/">부산영상위원회</option>
+              <option value="https://art.busan.go.kr/index.nm">부산시립미술관</option>
+              <option value="https://job.cleaneye.go.kr/">클린아이 잡플러스</option>
+            </select> -->
+          <div class="sns_link">
+            <a href="https://www.instagram.com/dureraum/" target="_blank" title="새창 열림" class="footer_sns insta">인스타그램</a>
+            <a href="https://www.facebook.com/ilovedureraumpage" target="_blank" title="새창 열림" class="footer_sns fb">페이스북</a>
+            <a href="https://www.youtube.com/user/Dureraum" target="_blank" title="새창 열림" class="footer_sns ytb">유튜브</a>
+            <a href="https://blog.naver.com/busancinema" target="_blank" title="새창 열림" class="footer_sns blog">블로그</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom page-wrap">
+        <div class="footer-logo"><img src="img/bottom-logo.png" alt="로고" /></div>
+        <div class="info">
+          <p>
+            (우)48058 부산광역시 해운대구 수영강변대로 120 영화의전당(우동 1467번지)<br />
+            TEL. 051-780-6000/6080 Fax. 051-780-6019<br />(재)영화의전당 대표자 김진해 사업자번호 : 617-82-11427<br />통신판매업신고 : 부산해운 제0510호
+          </p>
+        </div>
+        <div>
+          <ul class="footer-bottom-link">
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">윤리경영</a></li>
+            <li><a href="#">제휴</a></li>
+            <li><a href="#">정보공개</a></li>
+            <li><a href="#">채용</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+  </body>
+</html>
