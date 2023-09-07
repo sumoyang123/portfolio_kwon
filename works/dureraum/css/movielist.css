@@ -1,0 +1,422 @@
+a{
+  cursor:none;
+}
+.sub-page-tit {
+  margin-bottom: 80px;
+}
+/* 커서 효과 */
+.cursor-content{
+  width:400px;
+  height:300px;
+  position:absolute;
+  z-index:999;
+  top:0;
+  left:0;
+}
+.cursor-content.none{
+  display:none;
+}
+.cursor-content video{
+  width:100%;
+  height:100%;
+  position:absolute;
+  video::-webkit-media-controls-fullscreen-button { display: none !important; };
+  /* opacity:0; */
+}
+/* 날짜선택 */
+.datepick {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.datepick .title {
+  font: var(--title);
+}
+.date-wrap {
+  display: flex;
+  align-items: center;
+}
+.date-wrap ul {
+  display: flex;
+}
+.datepick ul li {
+  padding: 5px 17px;
+}
+.datepick ul .select {
+  background: var(--main-normal);
+  color: var(--gray-scale-0);
+  border-radius: 14px;
+  /* padding: 2px 17px; */
+}
+.datepick ul li:hover {
+  background: var(--main-normal);
+  color: var(--gray-scale-0);
+  border-radius: 14px;
+}
+.datepick .prev {
+  background: url(../img/left_arrow.png) no-repeat center center;
+  width: 12px;
+  height: 24px;
+  overflow: hidden;
+  text-indent: -999999%;
+  /* padding: 10px; */
+  cursor: pointer;
+  margin: 5px 10px;
+}
+.datepick .next {
+  background: url(../img/right_arrow.png) no-repeat center center;
+  width: 12px;
+  height: 24px;
+  overflow: hidden;
+  text-indent: -999999%;
+  /* padding: 10px; */
+  cursor: pointer;
+  margin: 5px 10px;
+}
+
+/* 극장선택탭 및 검색 */
+.tab_wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.lnb_tab ul {
+  display: flex;
+  gap: 20px;
+  font: var(--filter);
+  color: var(--gray-scale-6);
+}
+.lnb_tab ul .active {
+  color: var(--gray-scale-8);
+}
+.lnb_tab ul li {
+  transition: all 0.3s;
+}
+.lnb_tab ul li:hover {
+  color: var(--gray-scale-8);
+}
+
+/* 검색바 */
+.sub_search form {
+  border-bottom: 1px solid var(--gray-scale-6);
+  min-width: 380px;
+  display: flex;
+  justify-content: space-between;
+}
+.sub_search input {
+  border: none;
+}
+.sub_search input::placeholder {
+  color: var(--gray-scale-6);
+}
+.sub_search input[type="text"] {
+  font: var(--filter);
+  color: var(--gray-scale-6);
+}
+.sub_search button {
+  width: 26px;
+  height: 26px;
+  overflow: hidden;
+  background: url(../img/search.svg) no-repeat;
+  border: none;
+  text-indent: -999999%;
+  cursor: pointer;
+}
+.sub_search input,
+.sub_search button {
+  margin-bottom: 10px;
+}
+
+.line {
+  background: var(--gray-scale-8);
+  width: 100%;
+  height: 2px;
+  /* margin-bottom: 40px; */
+}
+
+/* 영화목록 */
+.movielist_wrap{
+  background-color:#fff;
+}
+.movie {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  align-items: center;
+  /* position: relative; */
+  border-bottom: 1px solid var(--gray-scale-5);
+  opacity:0;
+}
+
+/* 관람등급 */
+.poster {
+  position: relative;
+}
+.age_img {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  /* z-index: 999px;/ */
+}
+
+/* ---------------------- */
+.movie_cont {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  flex: 1;
+  /* padding: 15px 0 0; */
+}
+
+.movie_cont .cont_tit {
+  font: var(--title-sub);
+  transition: all 0.3s;
+  /* cursor: pointer; */
+}
+.movie_cont .cont_tit:hover {
+  color: var(--main-normal);
+}
+.movie_cont .date {
+  font: var(--body1);
+  color: var(--gray-scale-7);
+}
+.movie_cont .cont_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cont_text:nth-child(2) {
+  max-width: 960px;
+}
+.cont_text,
+.cont_detail {
+  font: var(--body1);
+  color: var(--gray-scale-9);
+}
+.cont_text p {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cont_detail li {
+  display: flex;
+}
+.cont_tit {
+  margin-bottom: 21px;
+}
+.cont_subject,
+.cont_text,
+.cont_detail li:not(:last-child) {
+  margin-bottom: 21px;
+}
+.cont_detail li p:nth-child(1) {
+  margin-right: 40px;
+}
+
+.movie_cont .category {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  text-align: center;
+  line-height: 80px;
+  display: flex;
+}
+.movie_cont .category .category-1 {
+  background: var(--main-normal);
+}
+.movie_cont .category p {
+  display: table-cell;
+  width: 80px;
+  height: 80px;
+  color: var(--gray-scale-0);
+  padding: 2px 0;
+  vertical-align: middle;
+  font-weight: 500;
+  word-break: keep-all;
+}
+.movie_cont .reserve_btn {
+  width: 190px;
+  height: 55px;
+  border-radius: 55px;
+  line-height: 53px;
+  border: 1px solid var(--gray-scale-5);
+  background: var(--gray-scale-0);
+  transition: all 0.3s;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  padding: 0 30px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.movie_cont .reserve_btn:hover {
+  border-color: var(--main-normal);
+  color: var(--main-normal);
+  font-weight: 500;
+}
+.movie_cont .reserve_btn::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 10px;
+  position: absolute;
+  left: 130px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(../img/ticket_right.svg) no-repeat 0 0 / 100% auto;
+}
+.movie_cont .reserve_btn:hover::after {
+  filter: invert(54%) sepia(34%) saturate(915%) hue-rotate(207deg) brightness(94%) contrast(83%);
+}
+
+@media screen and (max-width: 768px) {
+  .movie_cont {
+    align-items: flex-end;
+  }
+  .movie_cont .category {
+    position: relative;
+    top: 0;
+    right: 0;
+    order: 1;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0 0 10px;
+    line-height: 16px;
+  }
+  .movie_cont .category p {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    margin: 0;
+    order: 1;
+  }
+  .movie_cont .category p {
+    padding-left: 5px;
+  }
+  .movie_cont .cont_wrap {
+    display: flex;
+    justify-content: space-between;
+    order: 2;
+    width: 100%;
+  }
+  .movie_cont .reserve_btn {
+    position: relative;
+    margin-top: 21px;
+    order: 3;
+  }
+}
+
+/* ---------------------- */
+
+/* 페이지네이션 */
+.page {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0 180px;
+}
+.pagination {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.pagination li.num {
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  border-radius: 50px;
+  border: 1px solid var(--gray-scale-5);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.pagination li.num:hover {
+  background: var(--gray-scale-9);
+  color: var(--gray-scale-0);
+}
+.pagination .active {
+  background: var(--gray-scale-9);
+  color: var(--gray-scale-0);
+}
+.pagination li.next {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  text-indent: -9999px;
+  background: url(../img/next_icon.svg) no-repeat center center;
+  cursor: pointer;
+}
+.pagination li.last {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  text-indent: -9999px;
+  background: url(../img/last_icon.svg) no-repeat center center;
+  cursor: pointer;
+}
+@media screen and (max-width: 1345px) {
+  .movie {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 923px) {
+  .datepick {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .datepick .date-wrap ul li:nth-child(1),
+  .datepick .date-wrap ul li:nth-child(2),
+  .datepick .date-wrap ul li:nth-child(3),
+  .datepick .date-wrap ul li:nth-child(8),
+  .datepick .date-wrap ul li:nth-child(9) {
+    display: none;
+  }
+  .datepick .prev {
+    /* width: 20px; */
+    height: 20px;
+    /* padding: 3px 6px; */
+    text-indent: -9999px;
+  }
+  .datepick .next {
+    /* width: 20px; */
+    height: 20px;
+    /* padding: 3px 6px; */
+    text-indent: -9999px;
+  }
+  .datepick ul li {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+  .datepick ul li:hover {
+    background: var(--main-normal);
+    color: var(--gray-scale-0);
+    border-radius: 14px;
+  }
+  .tab_wrap {
+    flex-direction: column;
+    margin-top: 31px;
+  }
+  .sub_search {
+    margin: 22px 0 12px;
+    width: 100%;
+  }
+  .pagination {
+    gap: 6px;
+  }
+}
+
+
+

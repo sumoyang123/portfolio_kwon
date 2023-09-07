@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상영일정 | 영화의 전당</title>
+    <!-- favicon -->
+    <link rel="icon" href="./img/favicon.ico" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/movielist.css" />
+    <!--페이지에 맞게 수정해서 쓰기-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <div class="mouse__cursor"></div>
+    <div class="mouse__cursor2"></div>
+    <!-- header -->
+    <header>
+      <h1 class="logo">
+        <a href="./index.html"><img src="./img/header-logo.svg" alt="영화의 전당" title="홈으로 가기" /></a>
+      </h1>
+      <nav class="menu">
+        <div class="gnb">
+          <ul class="depth1">
+            <li class="depth1-li on">
+              <a href="./movie-list.html">영화</a>
+              <ul class="depth2">
+                <li><a href="./movie-list.html">상영일정</a></li>
+                <li>
+                  <a href="#">전체영화</a>
+                  <ul class="depth3">
+                    <li><a href="#">전체상영작</a></li>
+                    <li><a href="#">현재상영작</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">비평</a></li>
+              </ul>
+            </li>
+            <li class="depth1-li">
+              <a href="./ticket.html">공연&#183;전시</a>
+              <ul class="depth2">
+                <li>
+                  <a href="#">일정</a>
+                  <ul class="depth3">
+                    <li><a href="#">공연일정</a></li>
+                    <li><a href="#">전시&#183;행사일정</a></li>
+                  </ul>
+                </li>
+                <li><a href="./ticket.html">예매안내</a></li>
+              </ul>
+            </li>
+            <li class="depth1-li">
+              <a href="./academy.html">아카데미</a>
+              <ul class="depth2">
+                <li><a href="#">아카데미 일정</a></li>
+                <li><a href="#">영화 아카데미</a></li>
+                <li><a href="#">예술 아카데미</a></li>
+                <li><a href="#">어린이청소년 아카데미</a></li>
+                <li><a href="#">시설/기자재</a></li>
+                <li><a href="#">사용신청</a></li>
+              </ul>
+            </li>
+            <li class="depth1-li">
+              <a href="./notice.html">커뮤니티</a>
+              <ul class="depth2">
+                <li><a href="./notice.html">공지사항</a></li>
+                <li><a href="#">언론보도</a></li>
+                <li>
+                  <a href="#">웹진</a>
+                  <ul class="depth3">
+                    <li><a href="#">뉴스레터</a></li>
+                    <li><a href="#">월간지</a></li>
+                    <li><a href="#">계간지</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">갤러리</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">자유게시판</a></li>
+              </ul>
+            </li>
+            <li class="depth1-li">
+              <a href="./facility.html">대관</a>
+              <ul class="depth2">
+                <li>
+                  <a href="#">대관안내</a>
+                  <ul class="depth3">
+                    <li><a href="#">대관일정</a></li>
+                    <li><a href="#">대관절차</a></li>
+                    <li><a href="#">대관규정</a></li>
+                    <li><a href="#">대관료</a></li>
+                  </ul>
+                </li>
+                <li><a href="./facility.html">대관시설안내</a></li>
+                <li><a href="#">대관신청</a></li>
+              </ul>
+            </li>
+            <li class="depth1-li">
+              <a href="./greeting.html">영화의 전당</a>
+              <ul class="depth2">
+                <li><a href="./greeting.html">인사말 및 연혁</a></li>
+                <li><a href="#">CI 소개</a></li>
+                <li>
+                  <a href="#">시설안내</a>
+                  <ul class="depth3">
+                    <li><a href="#">좌석배치도</a></li>
+                    <li><a href="#">건축개요</a></li>
+                    <li><a href="#">편의시설</a></li>
+                    <li><a href="#">오시는길</a></li>
+                    <li><a href="#">주차안내</a></li>
+                    <li><a href="#">영화도서관</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">조직기구</a></li>
+                <li><a href="#">운영방향</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header-link-wrap">
+        <ul class="header-link">
+          <li><a href="#">고객센터</a></li>
+          <li><a href="#">멤버십</a></li>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+        </ul>
+      </div>
+
+      <div class="btn">
+        <button class="search">검색</button>
+        <div class="header_search">
+          <form name="searchFrm" method="get" action="">
+            <input type="text" name="keyword" id="schword" value placeholder="검색어를 입력해주세요." />
+            <button type="submit">검색하기</button>
+          </form>
+        </div>
+        <div class="allMenu">
+          <div class="allmenu-wrap">
+            <button class="allmenu">모든메뉴</button>
+          </div>
+        </div>
+
+        <!-- 사이트맵 -->
+        <div class="header_sitemap">
+          <div class="header_sitemap-cont layout">
+            <a href="#" class="close">사이트맵 닫기</a>
+            <div class="header_sitemap-btn">
+              <a href="#">로그인</a>
+              <a href="#">회원가입</a>
+              <a href="#">아카이브</a>
+            </div>
+            <ul class="list">
+              <li>
+                <p class="title">영화</p>
+                <ul>
+                  <li><a href="./movie-list.html">상영일정</a></li>
+                  <li><a href="#">전체영화</a></li>
+                  <li><a href="#">비평</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">공연·전시</p>
+                <ul>
+                  <li><a href="#">일정</a></li>
+                  <li><a href="./ticket.html">예매안내</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">아카데미</p>
+                <ul>
+                  <li><a href="#">아카데미 일정</a></li>
+                  <li><a href="#">영화 아카데미</a></li>
+                  <li><a href="#">예술 아카데미</a></li>
+                  <li><a href="#">어린이청소년 아카데미</a></li>
+                  <li><a href="#">시설/기자재</a></li>
+                  <li><a href="#">사용신청</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">커뮤니티</p>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">언론보도</a></li>
+                  <li><a href="#">웹진</a></li>
+                  <li><a href="#">갤러리</a></li>
+                  <li><a href="#">이벤트</a></li>
+                  <li><a href="#">자유게시판</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">대관</p>
+                <ul>
+                  <li><a href="#">대관안내</a></li>
+                  <li><a href="./facility.html">대관시설안내</a></li>
+                  <li><a href="#">대관신청</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">영화의 전당</p>
+                <ul>
+                  <li><a href="./greeting.html">인사말 및 연혁</a></li>
+                  <li><a href="#">CI소개</a></li>
+                  <li><a href="#">시설안내</a></li>
+                  <li><a href="#">조직기구</a></li>
+                  <li><a href="#">운영방향</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- //사이트맵 -->
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 퀵메뉴 -->
+    <div class="quick">
+      <div class="quick_link">
+        <ul>
+          <li class="library"><a href="#" class="footer_link" title="영화도서관">영화도서관</a></li>
+          <li class="event"><a href="#" class="footer_link" title="이벤트">이벤트</a></li>
+          <li class="seat"><a href="#" class="footer_linkt" title="좌석배치도">좌석배치도</a></li>
+          <li class="guide"><a href="#" class="footer_link" title="장애인 이용안내">장애인 이용안내</a></li>
+          <li class="contact"><a href="#" class="footer_link" title="오시는 길">오시는길</a></li>
+        </ul>
+      </div>
+      <div class="quick_sns">
+        <ul>
+          <li class="insta"><a href="https://www.instagram.com/dureraum/" target="_blank" class="footer_sns">인스타그램</a></li>
+          <li class="fb"><a href="https://www.facebook.com/ilovedureraumpage" target="_blank" class="footer_sns">페이스북</a></li>
+          <li class="ytb"><a href="https://www.youtube.com/user/Dureraum" target="_blank" class="footer_sns">유튜브</a></li>
+          <li class="blog"><a href="https://blog.naver.com/busancinema" target="_blank" class="footer_sns">블로그</a></li>
+        </ul>
+        <a href="#" onclick="window.scrollTo(0,0); return false;" class="btn-top">상단으로 가기</a>
+      </div>
+    </div>
+    <!-- //퀵메뉴 -->
+    
+    <!-- main -->
+    <main class="content-wrap">
+      <div class="sub-page-tit tit-opacity">
+        <div class="sub-top page-wrap">
+          <h2 class="tit">상영일정</h2>
+          <ul class="breadcrumb">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">영화</a></li>
+            <li><a href="#">상영일정</a></li>
+          </ul>
+        </div>
+        <div class="sub-bot no-tab page-wrap"></div>
+      </div>
+      <div class="sub_menu page-wrap tit-opacity">
+        <div class="datepick">
+          <div class="tit-wrap">
+            <p class="title">2023.08</p>
+          </div>
+          <div class="date-wrap">
+            <div class="prev">이전</div>
+            <ul>
+              <li><a href="#">19일</a></li>
+              <li><a href="#">20일</a></li>
+              <li><a href="#">21일</a></li>
+              <li><a href="#">22일</a></li>
+              <li class="select"><a href="#">23일</a></li>
+              <li><a href="#">24일</a></li>
+              <li><a href="#">25일</a></li>
+              <li><a href="#">26일</a></li>
+              <li><a href="#">27일</a></li>
+            </ul>
+            <div class="next">다음</div>
+          </div>
+        </div>
+
+        <!-- 탭 및 검색 -->
+        <div class="tab_wrap">
+          <div class="lnb_tab tab">
+            <ul>
+              <li><a href="#" class="tab_list active">전체</a></li>
+              <li><a href="#" class="tab_list">중극장</a></li>
+              <li><a href="#" class="tab_list">소극장</a></li>
+              <li><a href="#" class="tab_list">시네마테크</a></li>
+              <li><a href="#" class="tab_list">인디플러스</a></li>
+            </ul>
+          </div>
+          <div class="sub_search">
+            <form name="searchFrm" method="get" action="">
+              <input type="text" name="kwd" value placeholder="검색어를 입력해주세요." />
+              <button type="submit">검색하기</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-wrap">
+        <div class="line"></div>
+        <!-- 커서 -->
+        <div class="cursor-content none">
+          <img src="./source/movie_intro-oppenheimer.gif" alt="">
+        </div>
+        <!-- 영화 포스터 목록 -->
+        <div class="movielist_wrap">
+          <div class="movie top-opacity">
+            <div class="movie_img">
+              <a href="#">
+                <div class="poster"><img src="img/sub_movie1.png" alt="오펜하이머 포스터">
+                <img src="img/age15.png" alt="15세관람가" class="age_img">
+                </div>
+              </a>
+            </div>
+            <div class="movie_cont">
+              <div class="cont_wrap">
+                <div class="cont_subject">
+                  <p class="cont_tit">오펜하이머</p>
+                  <p class="date">2023.08.15(화) ~ 2023.09.02(토)</p>
+                </div>
+                <div class="cont_text">
+                  <p>“나는 이제 죽음이요, 세상의 파괴자가 되었다.” 세상을 구하기 위해 세상을 파괴할 지도 모르는 선택을 해야 하는 천재 과학자의 핵개발 프로젝트.</p>
+                </div>
+                <ul class="cont_detail">
+                  <li>
+                    <p>관람등급</p>
+                    <p>15세 이상 관람가</p>
+                  </li>
+                  <li>
+                    <p>티켓가격</p>
+                    <p>일반 8,000원 / 청소년 7,000원</p>
+                  </li>
+                  <li>
+                    <p>소요시간</p>
+                    <p>3시간(180분)</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="category">
+                <p class="category-1">소극장</p>
+              </div>
+              <a href="#" class="reserve_btn">예매하기</a>
+            </div>
+          </div>
+
+          <div class="movie">
+            <div class="movie_img">
+              <a href="#">
+                <div class="poster">
+                  <img src="img/sub_movie2.png" alt="밀수 포스터">
+                  <img src="img/age15.png" alt="15세관람가" class="age_img">
+                </div>
+              </a>
+            </div>
+            <div class="movie_cont">
+              <div class="cont_wrap">
+                <div class="cont_subject">
+                  <p class="cont_tit">밀수</p>
+                  <p class="date">2023.07.26(수) ~ 2023.09.01(금)</p>
+                </div>
+                <div class="cont_text">
+                  <p>일확천금을 얻을 수 있는 일생일대의 기회가 찾아오고 사람들은 서로를 속고 속이며 거대한 밀수판 속으로 휩쓸려 들어가기 시작하는데... 물길을 아는 자가 돈길의 주인이 된다!</p>
+                </div>
+                <ul class="cont_detail">
+                  <li>
+                    <p>관람등급</p>
+                    <p>15세 이상 관람가</p>
+                  </li>
+                  <li>
+                    <p>티켓가격</p>
+                    <p>일반 8,000원 / 청소년 7,000원</p>
+                  </li>
+                  <li>
+                    <p>소요시간</p>
+                    <p>3시간(180분)</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="category">
+                <p class="category-1">중극장</p>
+              </div>
+              <a href="#" class="reserve_btn">예매하기</a>
+            </div>
+          </div>
+
+          <div class="movie">
+            <div class="movie_img">
+              <a href="#">
+                <div class="poster">
+                  <img src="img/sub_movie3.png" alt="콘크리트 유토피아 포스터" class="poster" />
+                  <img src="img/age15.png" alt="15세관람가" class="age_img">
+                </div>
+              </a>
+            </div>
+            <div class="movie_cont">
+              <div class="cont_wrap">
+                <div class="cont_subject">
+                  <p class="cont_tit">콘크리트 유토피아</p>
+                  <p class="date">2023.08.09(수) ~ 2023.09.01(금)</p>
+                </div>
+                <div class="cont_text">
+                  <p>“아파트는 주민의 것” 하루아침에 폐허가 된 서울, 끝이 없는 생존의 위기 속 살아남은 자들의 생존 규칙 따르거나 떠나거나...!</p>
+                </div>
+                <ul class="cont_detail">
+                  <li>
+                    <p>관람등급</p>
+                    <p>15세 이상 관람가</p>
+                  </li>
+                  <li>
+                    <p>티켓가격</p>
+                    <p>일반 8,000원 / 청소년 7,000원</p>
+                  </li>
+                  <li>
+                    <p>소요시간</p>
+                    <p>3시간(180분)</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="category">
+                <p class="category-1">중극장</p>
+              </div>
+              <a href="#" class="reserve_btn">예매하기</a>
+            </div>
+          </div>
+
+          <div class="movie">
+            <div class="movie_img">
+              <a href="#">
+                <div class="poster">
+                  <img src="img/sub_movie4.png" alt="달짝지근해: 7510 포스터" />
+                  <img src="img/age12.png" alt="12세관람가" class="age_img">
+                </div>
+              </a>
+            </div>
+            <div class="movie_cont">
+              <div class="cont_wrap">
+                <div class="cont_subject">
+                  <p class="cont_tit">달짝지근해: 7510</p>
+                  <p class="date">2023.08.15(화) ~ 2023.09.01(금)</p>
+                </div>
+                <div class="cont_text">
+                  <p>타고난 미각 100%, 현실 감각은 0% 제과 연구원 ‘치호’ 매일 쳇바퀴 같은 삶을 살던 그의 인생이 버라이어티한 변화로 뒤덮이기 시작하는데...</p>
+                </div>
+                <ul class="cont_detail">
+                  <li>
+                    <p>관람등급</p>
+                    <p>12세 이상 관람가</p>
+                  </li>
+                  <li>
+                    <p>티켓가격</p>
+                    <p>일반 8,000원 / 청소년 7,000원</p>
+                  </li>
+                  <li>
+                    <p>소요시간</p>
+                    <p>3시간(180분)</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="category">
+                <p class="category-1">중극장</p>
+              </div>
+              <a href="#" class="reserve_btn">예매하기</a>
+            </div>
+          </div>
+
+          <div class="movie">
+            <div class="movie_img">
+              <a href="#">
+                <div class="poster">
+                  <img src="img/sub_movie5.png" alt="엔니오: 더 마에스트로 포스터" class="poster" /></a>
+                  <img src="img/age12.png" alt="12세관람가" class="age_img">
+                </div>
+            </div>
+            <div class="movie_cont">
+              <div class="cont_wrap">
+                <div class="cont_subject">
+                  <p class="cont_tit">엔니오: 더 마에스트로</p>
+                  <p class="date">2023.07.08(토) ~ 2023.09.05(화)</p>
+                </div>
+                <div class="cont_text">
+                  <p>“엔니오 모리꼬네는 우리 인생의 사운드트랙이죠.” 아카데미, 골든글로브 등을 석권한 세계적인 거장 엔니오 모리꼬네의 음악 인생을 담은 작품.</p>
+                </div>
+                <ul class="cont_detail">
+                  <li>
+                    <p>관람등급</p>
+                    <p>12세 이상 관람가</p>
+                  </li>
+                  <li>
+                    <p>티켓가격</p>
+                    <p>일반 8,000원 / 청소년 7,000원</p>
+                  </li>
+                  <li>
+                    <p>소요시간</p>
+                    <p>3시간(180분)</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="category">
+                <p class="category-1">시네마테크</p>
+              </div>
+              <a href="#" class="reserve_btn">예매하기</a>
+            </div>
+        </div>
+
+        <div class="page">
+          <ul class="pagination">
+            <li class="num active"><a href="#">1</a></li>
+            <li class="num"><a href="#">2</a></li>
+            <li class="num"><a href="#">3</a></li>
+            <li class="next"><a href="#">다음</a></li>
+            <li class="last"><a href="#">마지막</a></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <!-- //main -->
+
+    <!-- footer -->
+    <footer class="footer-wrap">
+      <div class="footer-top">
+        <div class="footer-top-inner page-wrap">
+          <p>COPYRIGHT(C) BUSAN CINEMA CENTER. ALL RIGHTS RESERVED</p>
+          <div class="footer__top-item">
+            <div class="sns_link">
+              <a href="https://www.instagram.com/dureraum/" target="_blank" title="새창 열림" class="footer_sns insta">인스타그램</a>
+              <a href="https://www.facebook.com/ilovedureraumpage" target="_blank" title="새창 열림" class="footer_sns fb">페이스북</a>
+              <a href="https://www.youtube.com/user/Dureraum" target="_blank" title="새창 열림" class="footer_sns ytb">유튜브</a>
+              <a href="https://blog.naver.com/busancinema" target="_blank" title="새창 열림" class="footer_sns blog">블로그</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom page-wrap">
+        <div class="footer-logo" onclick="location.href='./index.html';"><img src="img/bottom-logo.png" alt="로고" /></div>
+        <div class="info">
+          <p>
+            (우)48058 부산광역시 해운대구 수영강변대로 120 영화의전당(우동 1467번지)<br />
+            TEL. 051-780-6000/6080 Fax. 051-780-6019<br />(재)영화의전당 대표자 김진해 사업자번호 : 617-82-11427<br />통신판매업신고 : 부산해운 제0510호
+          </p>
+        </div>
+        <div>
+          <ul class="footer-bottom-link">
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">윤리경영</a></li>
+            <li><a href="#">제휴</a></li>
+            <li><a href="#">정보공개</a></li>
+            <li><a href="#">채용</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+    <script>
+      
+      // 애니메이션
+      $(window).resize(function(){ 
+      if (window.innerWidth >= 768) {  // 다바이스 크기가 768이상일때 
+      
+        // 커서 이펙트
+      $('body').mousemove(function(e){
+        let mouseX = e.pageX;
+            mouseY = e.pageY;
+        // 커서 마우스 따라가기
+        $('.cursor-content').css({'top': mouseY+5+'px','left':mouseX+'px'});
+        console.log(mouseX);
+        console.log(mouseY);
+        if(mouseY >= 500){
+          // 500보다 크다
+          $('.cursor-content').removeClass('none');
+          if(mouseY >= 2260){
+            $('.cursor-content').addClass('none');
+          }
+        }else{
+          // 2600보다 크다
+          $('.cursor-content').addClass('none');
+        };
+        
+
+      });
+      $('.movie').mouseenter(function(e){
+        let mouseX = e.pageX;
+            mouseY = e.pageY;
+        
+        let img1 = $('.cursor-content').find('img'),
+            img2 = $('.movie:nth-child(2)').find('img'),
+            img3 = $('.movie:nth-child(3)').find('img'),
+            img4 = $('.movie:nth-child(4)').find('img'),
+            img5 = $('.movie:nth-child(5)').find('img');
+        
+            $('.movie:nth-child(1)').mouseenter(function(){
+              img1.attr('src','./source/movie_intro-oppenheimer.gif');
+            });
+            $('.movie:nth-child(2)').mouseenter(function(){
+              img1.attr('src','./source/movie_intro-smugglers.gif');
+            });
+            $('.movie:nth-child(3)').mouseenter(function(){
+              img1.attr('src','./source/movie_intro-concrete.gif');
+            });
+            $('.movie:nth-child(4)').mouseenter(function(){
+              img1.attr('src','./source/movie_intro-sweet.gif');
+            });
+            $('.movie:nth-child(5)').mouseenter(function(){
+              img1.attr('src','./source/movie_intro-enio.gif');
+            });
+        
+          
+        
+      });
+
+
+
+
+      /* 스크롤 시 아이템 opacity*/ 
+          $(window).scroll(function () { 
+          var scrollValue = $(document).scrollTop();
+          let scroll = parseInt(scrollValue / 100);
+          console.log(scroll); 
+          if(scroll >= '11'){
+            $('.movielist_wrap').find('.movie:nth-child(5)').addClass('top-opacity');
+          } else if(scroll >= '7'){
+            $('.movielist_wrap').find('.movie:nth-child(4)').addClass('top-opacity');
+          } else if(scroll >= '4'){
+            $('.movielist_wrap').find('.movie:nth-child(3)').addClass('top-opacity');
+          } else if(scroll >= '1'){
+            $('.movielist_wrap').find('.movie:nth-child(2)').addClass('top-opacity');
+          };
+        });
+  
+      } else {
+      // 모바일
+      /* 스크립트내용*/ 
+      $(window).scroll(function () { 
+        var scrollValue = $(document).scrollTop();
+          console.log(scrollValue); 
+          if(scrollValue >= '3000'){
+            // 스크롤 3000 이상 ~ 5번째
+          } else if(scrollValue >= '2600'){
+            // 스크롤 2600 ~ 4번째
+          } else if(scrollValue >= '1800'){
+            // 스크롤 1800 ~ 3번째
+          } else if(scrollValue >= '1000'){
+            // 스크롤 1000 ~ 2번째
+          };
+        });
+      }
+      
+      }).resize(); 
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="./js/mouse.js"></script>
+  </body>
+</html>

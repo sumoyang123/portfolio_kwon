@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대관시설안내 | 영화의 전당</title>
+    <!-- favicon -->
+    <link rel="icon" href="./img/favicon.ico" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/facility.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./js/script.js"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+    <!--페이지에 맞게 수정해서 쓰기-->
+  </head>
+  <body>
+    <div class="mouse__cursor"></div>
+    <div class="mouse__cursor2"></div>
+    <!-- header -->
+    <header>
+      <h1 class="logo">
+        <a href="./index.html"><img src="./img/header-logo.svg" alt="영화의 전당" title="홈으로 가기" /></a>
+      </h1>
+      <nav class="menu">
+        <div class="gnb">
+          <ul class="depth1">
+            <li class="depth1-li">
+              <a href="./movie-list.html">영화</a>
+              <ul class="depth2">
+                <li><a href="./movie-list.html">상영일정</a></li>
+                <li>
+                  <a href="#">전체영화</a>
+                  <ul class="depth3">
+                    <li><a href="#">전체상영작</a></li>
+                    <li><a href="#">현재상영작</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">비평</a></li>
+              </ul>
+            </li>
+            <li class="depth1-li">
+              <a href="./ticket.html">공연&#183;전시</a>
+              <ul class="depth2">
+                <li>
+                  <a href="#">일정</a>
+                  <ul class="depth3">
+                    <li><a href="#">공연일정</a></li>
+                    <li><a href="#">전시&#183;행사일정</a></li>
+                  </ul>
+                </li>
+                <li><a href="./ticket.html">예매안내</a></li>
+              </ul>
+            </li>
+            <li class="depth1-li">
+              <a href="./academy.html">아카데미</a>
+              <ul class="depth2">
+                <li><a href="#">아카데미 일정</a></li>
+                <li><a href="#">영화 아카데미</a></li>
+                <li><a href="#">예술 아카데미</a></li>
+                <li><a href="#">어린이청소년 아카데미</a></li>
+                <li><a href="#">시설/기자재</a></li>
+                <li><a href="#">사용신청</a></li>
+              </ul>
+            </li>
+            <li class="depth1-li">
+              <a href="./notice.html">커뮤니티</a>
+              <ul class="depth2">
+                <li><a href="./notice.html">공지사항</a></li>
+                <li><a href="#">언론보도</a></li>
+                <li>
+                  <a href="#">웹진</a>
+                  <ul class="depth3">
+                    <li><a href="#">뉴스레터</a></li>
+                    <li><a href="#">월간지</a></li>
+                    <li><a href="#">계간지</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">갤러리</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">자유게시판</a></li>
+              </ul>
+            </li>
+            <li class="depth1-li on">
+              <a href="./facility.html">대관</a>
+              <ul class="depth2">
+                <li>
+                  <a href="#">대관안내</a>
+                  <ul class="depth3">
+                    <li><a href="#">대관일정</a></li>
+                    <li><a href="#">대관절차</a></li>
+                    <li><a href="#">대관규정</a></li>
+                    <li><a href="#">대관료</a></li>
+                  </ul>
+                </li>
+                <li><a href="./facility.html">대관시설소개</a></li>
+                <li><a href="#">대관신청</a></li>
+              </ul>
+            </li>
+            <li class="depth1-li">
+              <a href="./greeting.html">영화의 전당</a>
+              <ul class="depth2">
+                <li><a href="./greeting.html">인사말 및 연혁</a></li>
+                <li><a href="#">CI 소개</a></li>
+                <li>
+                  <a href="#">시설안내</a>
+                  <ul class="depth3">
+                    <li><a href="#">좌석배치도</a></li>
+                    <li><a href="#">건축개요</a></li>
+                    <li><a href="#">편의시설</a></li>
+                    <li><a href="#">오시는길</a></li>
+                    <li><a href="#">주차안내</a></li>
+                    <li><a href="#">영화도서관</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">조직기구</a></li>
+                <li><a href="#">운영방향</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header-link-wrap">
+        <ul class="header-link">
+          <li><a href="#">고객센터</a></li>
+          <li><a href="#">멤버십</a></li>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+        </ul>
+      </div>
+
+      <div class="btn">
+        <button class="search">검색</button>
+        <div class="header_search">
+          <form name="searchFrm" method="get" action="">
+            <input type="text" name="keyword" id="schword" value placeholder="검색어를 입력해주세요." />
+            <button type="submit">검색하기</button>
+          </form>
+        </div>
+        <div class="allMenu">
+          <div class="allmenu-wrap">
+            <button class="allmenu">모든메뉴</button>
+          </div>
+        </div>
+
+        <!-- 사이트맵 -->
+        <div class="header_sitemap">
+          <div class="header_sitemap-cont layout">
+            <a href="#" class="close">사이트맵 닫기</a>
+            <div class="header_sitemap-btn">
+              <a href="#">로그인</a>
+              <a href="#">회원가입</a>
+              <a href="#">아카이브</a>
+            </div>
+            <ul class="list">
+              <li>
+                <p class="title">영화</p>
+                <ul>
+                  <li><a href="./movie-list.html">상영일정</a></li>
+                  <li><a href="#">전체영화</a></li>
+                  <li><a href="#">비평</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">공연·전시</p>
+                <ul>
+                  <li><a href="#">일정</a></li>
+                  <li><a href="./ticket.html">예매안내</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">아카데미</p>
+                <ul>
+                  <li><a href="#">아카데미 일정</a></li>
+                  <li><a href="#">영화 아카데미</a></li>
+                  <li><a href="#">예술 아카데미</a></li>
+                  <li><a href="#">어린이청소년 아카데미</a></li>
+                  <li><a href="#">시설/기자재</a></li>
+                  <li><a href="#">사용신청</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">커뮤니티</p>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">언론보도</a></li>
+                  <li><a href="#">웹진</a></li>
+                  <li><a href="#">갤러리</a></li>
+                  <li><a href="#">이벤트</a></li>
+                  <li><a href="#">자유게시판</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">대관</p>
+                <ul>
+                  <li><a href="#">대관안내</a></li>
+                  <li><a href="./facility.html">대관시설소개</a></li>
+                  <li><a href="#">대관신청</a></li>
+                </ul>
+              </li>
+              <li>
+                <p class="title">영화의 전당</p>
+                <ul>
+                  <li><a href="./greeting.html">인사말 및 연혁</a></li>
+                  <li><a href="#">CI소개</a></li>
+                  <li><a href="#">시설안내</a></li>
+                  <li><a href="#">조직기구</a></li>
+                  <li><a href="#">운영방향</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- //사이트맵 -->
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 퀵메뉴 -->
+    <div class="quick">
+      <div class="quick_link">
+        <ul>
+          <li class="library"><a href="#" class="footer_link" title="영화도서관">영화도서관</a></li>
+          <li class="event"><a href="#" class="footer_link" title="이벤트">이벤트</a></li>
+          <li class="seat"><a href="#" class="footer_linkt" title="좌석배치도">좌석배치도</a></li>
+          <li class="guide"><a href="#" class="footer_link" title="장애인 이용안내">장애인 이용안내</a></li>
+          <li class="contact"><a href="#" class="footer_link" title="오시는 길">오시는길</a></li>
+        </ul>
+      </div>
+      <div class="quick_sns">
+        <ul>
+          <li class="insta"><a href="https://www.instagram.com/dureraum/" target="_blank" class="footer_sns">인스타그램</a></li>
+          <li class="fb"><a href="https://www.facebook.com/ilovedureraumpage" target="_blank" class="footer_sns">페이스북</a></li>
+          <li class="ytb"><a href="https://www.youtube.com/user/Dureraum" target="_blank" class="footer_sns">유튜브</a></li>
+          <li class="blog"><a href="https://blog.naver.com/busancinema" target="_blank" class="footer_sns">블로그</a></li>
+        </ul>
+        <a href="#" onclick="window.scrollTo(0,0); return false;" class="btn-top">상단으로 가기</a>
+      </div>
+    </div>
+    <!-- //퀵메뉴 -->
+
+    <!-- main -->
+    <main class="content-wrap">
+      <!-- 대관시설 -->
+      <div class="sub-page-tit tit-opacity">
+        <div class="sub-top page-wrap">
+          <h2 class="tit">대관시설안내</h2>
+          <ul class="breadcrumb">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">대관</a></li>
+            <li><a href="./facility.html">대관시설안내</a></li>
+          </ul>
+        </div>
+        <div class="sub-bot no-tab">
+        </div>
+      </div>
+      <section class="facility">
+        <article class="facility-item page-wrap top-opacity">
+          <h3>야외극장</h3>
+          <div class="content">
+            <div class="facility-img">
+              <img src="img/coronation/outside.jpg" alt="야외극장">
+            </div>
+            <div class="facility-info">
+              <p>야외극장은 고정석 2,486석과 가변석 500~1,500석으로 영화제 개,폐막 및 다양한 공연 등에 적합합니다.</p>
+              <table>
+                <caption>무대기술자료목록</caption>
+                <tr>
+                  <th rowspan="2">무대</th>
+                  <th>장비리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                    <a href="">hwp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>평면도</th>
+                  <td>
+                    <a href="">dwg</a>
+                    <a href="">jpg</a>
+                    <a href="">pdf</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">조명</th>
+                  <th>장비리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                    <a href="">hwp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>평면도</th>
+                  <td>
+                    <a href="">dwg</a>
+                    <a href="">jpg</a>
+                    <a href="">pdf</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">음향</th>
+                  <th>장비리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                    <a href="">hwp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>평면도</th>
+                  <td>
+                    <a href="">dwg</a>
+                    <a href="">jpg</a>
+                    <a href="">pdf</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">상부기계리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </article>
+        <article class="facility-item page-wrap">
+          <h3>하늘연극장</h3>
+          <div class="content">
+            <div class="facility-img">
+              <img src="img/coronation/sky.jpg" alt="하늘연극장">
+            </div>
+            <div class="facility-info">
+              <p>하늘연극장은 841석으로 중극장의 규모로 음악회, 오페라, 연극 등의 공연을 하기에 더없이 적합합니다.</p>
+              <table>
+                <caption>무대기술자료목록</caption>
+                <tr>
+                  <th rowspan="2">무대</th>
+                  <th>장비리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                    <a href="">hwp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>평면도</th>
+                  <td>
+                    <a href="">dwg</a>
+                    <a href="">jpg</a>
+                    <a href="">pdf</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">조명</th>
+                  <th>장비리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                    <a href="">hwp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>평면도</th>
+                  <td>
+                    <a href="">dwg</a>
+                    <a href="">jpg</a>
+                    <a href="">pdf</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">음향</th>
+                  <th>장비리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                    <a href="">hwp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>평면도</th>
+                  <td>
+                    <a href="">dwg</a>
+                    <a href="">jpg</a>
+                    <a href="">pdf</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">상부기계리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </article>
+        <article class="facility-item page-wrap">
+          <h3>중극장</h3>
+          <div class="content">
+            <div class="facility-img">
+              <img src="img/coronation/middle-02.png" alt="중극장">
+            </div>
+            <div class="facility-info">
+              <p>중극장은 413석으로 모든 장르의 영화를 상영할 수 있는 시설 시사회,관객과의 만남 등 행사에 적합합니다.</p>
+              <table>
+                <caption>무대기술자료목록</caption>
+                <tr>
+                  <th rowspan="2">무대</th>
+                  <th>장비리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                    <a href="">hwp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>평면도</th>
+                  <td>
+                    <a href="">dwg</a>
+                    <a href="">jpg</a>
+                    <a href="">pdf</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">조명</th>
+                  <th>장비리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                    <a href="">hwp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>평면도</th>
+                  <td>
+                    <a href="">dwg</a>
+                    <a href="">jpg</a>
+                    <a href="">pdf</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">음향</th>
+                  <th>장비리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                    <a href="">hwp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>평면도</th>
+                  <td>
+                    <a href="">dwg</a>
+                    <a href="">jpg</a>
+                    <a href="">pdf</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">상부기계리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </article>
+        <article class="facility-item page-wrap">
+          <h3>소극장</h3>
+          <div class="content">
+            <div class="facility-img">
+              <img src="img/coronation/small-02.png" alt="소극장">
+            </div>
+            <div class="facility-info">
+              <p>소극장은 212석으로 모든 장르의 영화를 상영할 수 있는 시설 시사회,관객과의 만남 등 행사에 적합합니다.</p>
+              <table>
+                <caption>무대기술자료목록</caption>
+                <tr>
+                  <th rowspan="2">무대</th>
+                  <th>장비리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                    <a href="">hwp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>평면도</th>
+                  <td>
+                    <a href="">dwg</a>
+                    <a href="">jpg</a>
+                    <a href="">pdf</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">조명</th>
+                  <th>장비리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                    <a href="">hwp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>평면도</th>
+                  <td>
+                    <a href="">dwg</a>
+                    <a href="">jpg</a>
+                    <a href="">pdf</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">음향</th>
+                  <th>장비리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                    <a href="">hwp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>평면도</th>
+                  <td>
+                    <a href="">dwg</a>
+                    <a href="">jpg</a>
+                    <a href="">pdf</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">상부기계리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </article>
+        <article class="facility-item page-wrap">
+          <h3>시네마테크</h3>
+          <div class="content">
+            <div class="facility-img">
+              <img src="img/coronation/cinematech.jpg" alt="시네마테크">
+            </div>
+            <div class="facility-info">
+              <p>시네마테크는 146석으로 독립영화,고전영화,예술영화 등 상영 시사회,관객과의 만남 등 행사에 적합합니다.</p>
+              <table>
+                <caption>무대기술자료목록</caption>
+                <tr>
+                  <th rowspan="2">무대</th>
+                  <th>장비리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                    <a href="">hwp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>평면도</th>
+                  <td>
+                    <a href="">dwg</a>
+                    <a href="">jpg</a>
+                    <a href="">pdf</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">조명</th>
+                  <th>장비리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                    <a href="">hwp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>평면도</th>
+                  <td>
+                    <a href="">dwg</a>
+                    <a href="">jpg</a>
+                    <a href="">pdf</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">음향</th>
+                  <th>장비리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                    <a href="">hwp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>평면도</th>
+                  <td>
+                    <a href="">dwg</a>
+                    <a href="">jpg</a>
+                    <a href="">pdf</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">상부기계리스트</th>
+                  <td>
+                    <a href="">xls</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <!-- //main -->
+
+    <!-- footer -->
+    <footer class="footer-wrap">
+      <div class="footer-top">
+        <div class="footer-top-inner page-wrap">
+          <p>COPYRIGHT(C) BUSAN CINEMA CENTER. ALL RIGHTS RESERVED</p>
+          <div class="footer__top-item">
+            <div class="sns_link">
+              <a href="https://www.instagram.com/dureraum/" target="_blank" title="새창 열림" class="footer_sns insta">인스타그램</a>
+              <a href="https://www.facebook.com/ilovedureraumpage" target="_blank" title="새창 열림" class="footer_sns fb">페이스북</a>
+              <a href="https://www.youtube.com/user/Dureraum" target="_blank" title="새창 열림" class="footer_sns ytb">유튜브</a>
+              <a href="https://blog.naver.com/busancinema" target="_blank" title="새창 열림" class="footer_sns blog">블로그</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom page-wrap">
+        <div class="footer-logo" onclick="location.href='./index.html';"><img src="img/bottom-logo.png" alt="로고" /></div>
+        <div class="info">
+          <p>
+            (우)48058 부산광역시 해운대구 수영강변대로 120 영화의전당(우동 1467번지)<br />
+            TEL. 051-780-6000/6080 Fax. 051-780-6019<br />(재)영화의전당 대표자 김진해 사업자번호 : 617-82-11427<br />통신판매업신고 : 부산해운 제0510호
+          </p>
+        </div>
+        <div>
+          <ul class="footer-bottom-link">
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">윤리경영</a></li>
+            <li><a href="#">제휴</a></li>
+            <li><a href="#">정보공개</a></li>
+            <li><a href="#">채용</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+    <script src="js/mouse.js"></script>
+  </body>
+</html>
