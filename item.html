@@ -1,9 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="HTML5 website template">
+    <meta name="keywords" content="global, template, html, sass, jquery">
+    <meta name="author" content="Bucky Maler">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        ul,li{list-style: none;}
+        .work-list-wrap{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .work-list{
+            padding: 20px;
+            border-radius: 20px;
+            border: 2px solid;
+        }
+        .work-img{
+            width: 180px;
+            height: 180px;
+            background: coral;
+        }
+        .work-popup{
+            position: fixed;
+            left: 50%;top: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            padding: 40px;
+            background-color: white;
+            border: 2px solid;
+            border-radius: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="work">
@@ -12,14 +45,18 @@
             <li class="work-list">
                 <div class="work-img"></div>
                 <div class="work-popup">
-                    <h3>작품제목을 써주세요.</h3>
-                    <p>작품설명을 적어주세요.<br>두번째줄<br>세번째줄</p>
-                    <p>여기에 기여도를 적어주세요.</p>
-                    <div class="btn-wrap">
-                        <a href="#" target="_blank" class="web-link">웹사이트 가기</a>
-                        <a href="#" target="_blank" class="plan-link">기획서 보기</a>
-                        <a href="#" target="_blank" class="image-link">이미지 보기</a>
+                    <div class="work-img"></div>
+                    <div class="popup-right">
+                        <h3>작품제목을 써주세요.</h3>
+                        <p>작품설명을 적어주세요.<br>두번째줄<br>세번째줄</p>
+                        <p>여기에 기여도를 적어주세요.</p>
+                        <div class="btn-wrap">
+                            <a href="#" target="_blank" class="web-link">웹사이트 가기</a>
+                            <a href="#" target="_blank" class="plan-link">기획서 보기</a>
+                            <a href="#" target="_blank" class="image-link">이미지 보기</a>
+                        </div>
                     </div>
+                    
                 </div>
             </li>
         </ul>
