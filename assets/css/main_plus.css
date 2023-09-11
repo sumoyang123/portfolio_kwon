@@ -218,3 +218,159 @@
 .donut-chart-center img {
   width: 48px;
 }
+
+.work ul,li{list-style: none;}
+.work-list-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 20px;
+}
+.work-list{
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.work-profile{
+    width: 225px;
+    height: 150px;
+    background: coral;
+    transition: 0.5s;
+}
+.work-profile:hover{scale: 1.1;}
+
+.work-list:nth-child(1) .work-profile{
+    background: url(../img/yesbeauty.jpg) no-repeat center;
+    background-size: cover;
+}
+.work-list:nth-child(1) .work-img{
+    background: url(../img/yesbeauty.jpg) no-repeat center;
+    background-size: cover;
+}
+.work-list:nth-child(2) .work-profile{
+    background: url(../img/railroadmuseum.jpg) no-repeat center;
+    background-size: cover;
+}
+.work-list:nth-child(2) .work-img{
+    background: url(../img/railroadmuseum.jpg) no-repeat center;
+    background-size: cover;
+}
+.work-list:nth-child(3) .work-profile{
+    background: url(../img/trekking.jpg) no-repeat center;
+    background-size: cover;
+}
+.work-list:nth-child(3) .work-img{
+    background: url(../img/trekking.jpg) no-repeat center;
+    background-size: cover;
+}
+.work-list:nth-child(4) .work-profile{
+    background: url(../img/logitech.jpg) no-repeat center;
+    background-size: cover;
+}
+.work-list:nth-child(4) .work-img{
+    background: url(../img/logitech.jpg) no-repeat center;
+    background-size: cover;
+}
+.work-list:nth-child(5) .work-profile{
+    background: url(../img/dreamtree.jpg) no-repeat center;
+    background-size: cover;
+}
+.work-list:nth-child(5) .work-img{
+    background: url(../img/dreamtree.jpg) no-repeat center;
+    background-size: cover;
+}
+.work-list:nth-child(6) .work-profile{
+    background: url(../img/dureraum.jpg) no-repeat center;
+    background-size: cover;
+}
+.work-list:nth-child(6) .work-img{
+    background: url(../img/dureraum.jpg) no-repeat center;
+    background-size: cover;
+}
+.work-list:nth-child(7) .work-profile{
+    background: url(../img/medipet.jpg) no-repeat center;
+    background-size: cover;
+}
+.work-list:nth-child(7) .work-img{
+    background: url(../img/medipet.jpg) no-repeat center;
+    background-size: cover;
+}
+.work-list:nth-child(8) .work-profile{
+    background: url(../img/mcdelivery.jpg) no-repeat center;
+    background-size: cover;
+}
+.work-list:nth-child(8) .work-img{
+    background: url(../img/mcdelivery.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.work-img{
+    width: 360px;
+    height: 240px;
+    background-color: aqua;
+}
+.work-popup *{
+    padding: 0;
+    margin: 0;
+}
+.work-popup{
+    position: fixed;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 60px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(70, 70, 70, 0.4);
+    display: none;
+    z-index: 9999;
+    cursor: default;
+}
+.work-space{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.popup-right{
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.popup-right h3{
+    font-size: 24px;
+    font-weight: 700;
+}
+.btn-wrap{
+    display: flex;
+}
+.btn-wrap a{
+    display: block;
+    width: 96px;
+    margin-left: 8px;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 2px solid #fad693;
+    background-color: #FFF8DE;
+    transition: 0.5s;
+}
+.btn-wrap a:first-child{margin-left: 0;}
+.btn-wrap a:hover{
+    background-color: #f7a50f;
+    border: 2px solid #f7a50f;
+    color: #fff;
+}
+.work-bg{
+    position: fixed;
+    left: 0;top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 999;
+    display: none;
+    color: #fff;
+    text-align: center;
+    padding-top: 80px;
+}
