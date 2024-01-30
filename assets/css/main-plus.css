@@ -21,6 +21,16 @@
   font-size: 20px;
   color: #f7a50f;
 }
+.plus-info{
+  font-size: 14px;
+  color: #585858;
+  padding-left: 8px;
+  font-weight: 400;
+}
+.diff-color{
+  color: #4375ff;
+  text-decoration: underline;
+}
 .aboutme .education,
 .aboutme .certificate {
   font-family: "Noto Sans KR", sans-serif;
